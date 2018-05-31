@@ -1,0 +1,326 @@
+$---------------------------------------------------------------------MDI_HEADER
+[MDI_HEADER]
+ FILE_TYPE     =  'sub'
+ FILE_VERSION  =  7.0
+ FILE_FORMAT   =  'ASCII'
+$---------------------------------------------------------------SUBSYSTEM_HEADER
+[SUBSYSTEM_HEADER]
+ TEMPLATE_NAME  =  '<SLIIT_Demo_ThreeWheeler>/templates.tbl/_rack_pinion_steering.tpl'
+ MAJOR_ROLE     =  'steering'
+ MINOR_ROLE     =  'front'
+ TIMESTAMP      =  '2018/05/31,10:09:00'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+ LENGTH  =  'mm'
+ FORCE   =  'newton'
+ ANGLE   =  'deg'
+ MASS    =  'kg'
+ TIME    =  'sec'
+$----------------------------------------------------------------------HARDPOINT
+[HARDPOINT]
+{hardpoint_name                  symmetry         x_value    y_value    z_value}
+ 'intermediate_shaft_forward  '  'single    '      667.0      -300.0       530.0
+ 'intermediate_shaft_rearward '  'single    '      817.0      -300.0       630.0
+ 'pinion_pivot                '  'single    '      467.0      -300.0       330.0
+ 'steering_wheel_center       '  'single    '     1167.0      -300.0       730.0
+ 'rack_house_mount            '  'left/right'      467.0      -350.0       330.0
+ 'tierod_inner                '  'left/right'      467.0      -400.0       330.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'intermediate_shaft'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.0
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 742.0, -300.0, 580.0
+$ Part orientation is dependent.
+$   ZP vector = 0.8320502943,  0.0,  0.5547001962
+$   XP vector = 0.5547001962,  -1.8369701987E-16,  -0.8320502943
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  2764.9179238818
+ IYY                      =  2764.9179238818
+ IZZ                      =  113.1691810841
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'intermediate_shaft'
+ PART        =  'intermediate_shaft'
+ SYMMETRY    =  'single'
+ RADIUS      =  15.0445459276
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'pinion'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  0.5
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 467.0, -300.0, 330.0
+$ Part orientation is dependent.
+$   ZP vector = 0.7071067812,  0.0,  0.7071067812
+$   XP vector = 0.7071067812,  -1.8369701987E-16,  -0.7071067812
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  10.0
+ IYY                      =  10.0
+ IZZ                      =  10.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'rack'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.8888888889
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 467.0, 0.0, 330.0
+$ Part orientation is dependent.
+$   ZP vector = 0.0,  -1.0,  0.0
+$   XP vector = 1.0,  0.0,  0.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  1.1376967058E+05
+ IYY                      =  1.1376967058E+05
+ IZZ                      =  85.6374549196
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'rack'
+ PART        =  'rack'
+ SYMMETRY    =  'single'
+ RADIUS      =  9.5223396425
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'rack_housing'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  4.0
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 467.0, 0.0, 330.0
+$ Part orientation is dependent.
+$   ZP vector = 0.0,  -1.0,  0.0
+$   XP vector = 1.0,  0.0,  0.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  2.1353735198E+05
+ IYY                      =  2.1353735198E+05
+ IZZ                      =  408.0372851994
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'rack_housing'
+ PART        =  'rack_housing'
+ SYMMETRY    =  'single'
+ RADIUS      =  14.2835094637
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'steering_column'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  2.0
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 992.0, -300.0, 680.0
+$ Part orientation is dependent.
+$   ZP vector = -0.9615239476,  1.7662908372E-16,  -0.2747211279
+$   XP vector = -0.2747211279,  5.0465452491E-17,  0.9615239476
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  22195.429797
+ IYY                      =  22195.429797
+ IZZ                      =  224.1929264276
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'steering_column'
+ PART        =  'steering_column'
+ SYMMETRY    =  'single'
+ RADIUS      =  14.9730733795
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'steering_shaft'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.5689290811
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 567.0, -300.0, 430.0
+$ Part orientation is dependent.
+$   ZP vector = 0.7071067812,  0.0,  0.7071067812
+$   XP vector = 0.7071067812,  -1.8369701987E-16,  -0.7071067812
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  10548.304417
+ IYY                      =  10548.304417
+ IZZ                      =  177.5544192877
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'steering_shaft'
+ PART        =  'steering_shaft'
+ SYMMETRY    =  'single'
+ RADIUS      =  15.0445459276
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'steering_wheel'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  2.1500262923
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 1167.0, -300.0, 730.0
+$ Part orientation is dependent.
+$   ZP vector = -0.9615239476,  1.7662908372E-16,  -0.2747211279
+$   XP vector = -0.2747211279,  5.0465452491E-17,  0.9615239476
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.5768768867
+ IXX                      =  25892.147854
+ IYY                      =  25892.147854
+ IZZ                      =  51629.176982
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$--------------------------------------------------------------------SWITCH_PART
+[SWITCH_PART]
+ USAGE       =  'rack_house_mount'
+ SYMMETRY    =  'single'
+ INDEX       =  1
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'torsion_bar'
+ SYMMETRY                =  'single'
+$ Bushing orientation is dependent.
+$   ZP vector = 0.7071067812,  0.0,  0.7071067812
+$   XP vector = 0.7071067812,  -1.8369701987E-16,  -0.7071067812
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/mdi_steering_tbar.bus'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'rack_housing_bushing'
+ SYMMETRY                =  'left/right'
+$ Bushing orientation is dependent.
+$   ZP vector = 1.2246467991E-16,  1.0,  0.0
+$   XP vector = 1.0,  -1.2246467991E-16,  1.2246467991E-16
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_steer_rack_house.bus'
+$------------------------------------------------------------------GEAR_ASSEMBLY
+[GEAR_ASSEMBLY]
+ USAGE            =  'input_shaft_pinion_lock'
+ SYMMETRY         =  'single'
+ REDUCTION_RATIO  =  1.0
+ INVERT_INPUT     =  'yes'
+$------------------------------------------------------------------GEAR_ASSEMBLY
+[GEAR_ASSEMBLY]
+ USAGE            =  'pinion_to_rack'
+ SYMMETRY         =  'single'
+ REDUCTION_RATIO  =  0.1745329252
+ INVERT_INPUT     =  'yes'
+$------------------------------------------------------------------GEAR_ASSEMBLY
+[GEAR_ASSEMBLY]
+ USAGE            =  'steering_wheel_column_lock'
+ SYMMETRY         =  'single'
+ REDUCTION_RATIO  =  1.0
+ INVERT_INPUT     =  'no'
+$-----------------------------------------------------------------GENERAL_SPLINE
+[GENERAL_SPLINE]
+ USAGE          =  'steering_assist'
+ SYMMETRY       =  'single'
+ TYPE           =  'two_dimensional'
+ PROPERTY_FILE  =  '<SLIIT_Demo_ThreeWheeler>/steering_assists.tbl/mdi_steer_assist.ste'
+ CURVE_NAME     =  'steering_assist'
+(COMMENTS)
+{comment_line}
+'Example of a steering assist spline'
+$--------------------------------------------------------------GENERAL_PARAMETER
+[GENERAL_PARAMETER]
+ USAGE           =  'rack_piston_area'
+ SYMMETRY        =  'single'
+ PROPERTY_FILE   =  '<SLIIT_Demo_ThreeWheeler>/steering_assists.tbl/mdi_steer_assist.ste'
+ DATA_BLOCK      =  'STEERING_ASSIST'
+ ATTRIBUTE_NAME  =  'piston_area'
+$----------------------------------------------------------------------PARAMETER
+[PARAMETER]
+{parameter_name                  symmetry       type       value}
+ 'kinematic_flag              '  'single    '   'integer'  0
+ 'steering_assist_active      '  'single    '   'integer'  1
+ 'max_rack_displacement       '  'single    '   'real'     100.0
+ 'max_rack_force              '  'single    '   'real'     10000.0
+ 'max_steering_angle          '  'single    '   'real'     720.0
+ 'max_steering_torque         '  'single    '   'real'     60000.0

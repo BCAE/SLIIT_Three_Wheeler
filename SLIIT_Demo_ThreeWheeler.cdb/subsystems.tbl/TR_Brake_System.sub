@@ -1,0 +1,36 @@
+$---------------------------------------------------------------------MDI_HEADER
+[MDI_HEADER]
+ FILE_TYPE     =  'sub'
+ FILE_VERSION  =  7.0
+ FILE_FORMAT   =  'ASCII'
+$---------------------------------------------------------------SUBSYSTEM_HEADER
+[SUBSYSTEM_HEADER]
+ TEMPLATE_NAME  =  '<SLIIT_Demo_ThreeWheeler>/templates.tbl/_brake_system_4Wdisk.tpl'
+ MAJOR_ROLE     =  'brake_system'
+ MINOR_ROLE     =  'any'
+ TIMESTAMP      =  '2018/05/31,10:09:01'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+ LENGTH  =  'mm'
+ FORCE   =  'newton'
+ ANGLE   =  'deg'
+ MASS    =  'kg'
+ TIME    =  'sec'
+$----------------------------------------------------------------------PARAMETER
+[PARAMETER]
+{parameter_name                   symmetry       type       value}
+ 'kinematic_flag               '  'single    '   'integer'  0
+ 'front_brake_bias             '  'single    '   'real'     0.6
+ 'front_brake_mu               '  'single    '   'real'     0.4
+ 'front_effective_piston_radius'  'single    '   'real'     145.0
+ 'front_piston_area            '  'single    '   'real'     2500.0
+ 'front_rotor_hub_wheel_offset '  'single    '   'real'     25.0
+ 'front_rotor_hub_width        '  'single    '   'real'     40.0
+ 'front_rotor_width            '  'single    '   'real'     -25.0
+ 'max_brake_value              '  'single    '   'real'     100.0
+ 'rear_brake_mu                '  'single    '   'real'     0.4
+ 'rear_effective_piston_radius '  'single    '   'real'     130.0
+ 'rear_piston_area             '  'single    '   'real'     2500.0
+ 'rear_rotor_hub_wheel_offset  '  'single    '   'real'     25.0
+ 'rear_rotor_hub_width         '  'single    '   'real'     40.0
+ 'rear_rotor_width             '  'single    '   'real'     -25.0

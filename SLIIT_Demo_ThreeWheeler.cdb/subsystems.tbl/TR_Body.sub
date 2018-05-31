@@ -1,0 +1,91 @@
+$---------------------------------------------------------------------MDI_HEADER
+[MDI_HEADER]
+ FILE_TYPE     =  'sub'
+ FILE_VERSION  =  7.0
+ FILE_FORMAT   =  'ASCII'
+$---------------------------------------------------------------SUBSYSTEM_HEADER
+[SUBSYSTEM_HEADER]
+ TEMPLATE_NAME  =  '<SLIIT_Demo_ThreeWheeler>/templates.tbl/_rigid_chassis.tpl'
+ MAJOR_ROLE     =  'body'
+ MINOR_ROLE     =  'any'
+ TIMESTAMP      =  '2018/05/31,10:09:01'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+ LENGTH  =  'mm'
+ FORCE   =  'newton'
+ ANGLE   =  'deg'
+ MASS    =  'kg'
+ TIME    =  'sec'
+$----------------------------------------------------------------------HARDPOINT
+[HARDPOINT]
+{hardpoint_name                  symmetry         x_value    y_value    z_value}
+ 'chassis_graphics            '  'single    '        0.0      1532.5      1200.0
+ 'path_reference              '  'single    '     1200.0         0.0       500.0
+ 'trim_dummy                  '  'single    '     1500.0         0.0       440.0
+ 'bedplate_front_loc          '  'left/right'      719.0      -890.0       214.0
+ 'bedplate_rear_loc           '  'left/right'     2093.0      -923.0       242.0
+ 'front_wheel_center          '  'left/right'      267.0      -760.0       330.0
+ 'rear_wheel_center           '  'left/right'     2827.0      -797.0       330.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'chassis'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  995.0
+ SPRUNG_PERCENTAGE        =  100.0
+ PART_LOC_X               =  0.0
+ PART_LOC_Y               =  0.0
+ PART_LOC_Z               =  0.0
+ PART_ORI_ZP1             =  0.0
+ PART_ORI_ZP2             =  0.0
+ PART_ORI_ZP3             =  1.0
+ PART_ORI_XP1             =  1.0
+ PART_ORI_XP2             =  0.0
+ PART_ORI_XP3             =  0.0
+ CM_LOCATION_FROM_PART_X  =  1500.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  450.0
+ IXX                      =  2.00E+08
+ IYY                      =  5.00E+08
+ IZZ                      =  6.00E+08
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+(COMMENTS)
+{comment_line}
+'Chassis Structure'
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'trim_mass'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  0.0
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 1500.0, 0.0, 440.0
+ PART_ORI_ZP1             =  0.0
+ PART_ORI_ZP2             =  0.0
+ PART_ORI_ZP3             =  1.0
+ PART_ORI_XP1             =  1.0
+ PART_ORI_XP2             =  0.0
+ PART_ORI_XP3             =  0.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  0.0
+ IYY                      =  0.0
+ IZZ                      =  0.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$----------------------------------------------------------------------PARAMETER
+[PARAMETER]
+{parameter_name                  symmetry       type       value}
+ 'kinematic_flag              '  'single    '   'integer'  0
+ 'aero_drag_active            '  'single    '   'integer'  1
+ 'aero_frontal_area           '  'single    '   'real'     1.80E+06
+ 'air_density                 '  'single    '   'real'     1.22E-09
+ 'drag_coefficient            '  'single    '   'real'     0.36
+ 'graphics_choice             '  'single    '   'integer'  1

@@ -1,0 +1,231 @@
+$---------------------------------------------------------------------MDI_HEADER
+[MDI_HEADER]
+ FILE_TYPE     =  'sub'
+ FILE_VERSION  =  7.0
+ FILE_FORMAT   =  'ASCII'
+$---------------------------------------------------------------SUBSYSTEM_HEADER
+[SUBSYSTEM_HEADER]
+ TEMPLATE_NAME  =  '<SLIIT_Demo_ThreeWheeler>/templates.tbl/_powertrain.tpl'
+ MAJOR_ROLE     =  'powertrain'
+ MINOR_ROLE     =  'rear'
+ TIMESTAMP      =  '2018/05/31,10:09:01'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+ LENGTH  =  'mm'
+ FORCE   =  'newton'
+ ANGLE   =  'deg'
+ MASS    =  'kg'
+ TIME    =  'sec'
+$----------------------------------------------------------------------HARDPOINT
+[HARDPOINT]
+{hardpoint_name                  symmetry         x_value    y_value    z_value}
+ 'graphics_reference          '  'single    '     4000.0       -90.0       610.0
+ 'front_engine_mount          '  'left/right'     2300.0      -300.0       300.0
+ 'rear_engine_mount           '  'left/right'     3200.0      -200.0       300.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'powertrain'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  300.0
+ SPRUNG_PERCENTAGE        =  100.0
+ PART_LOC_X               =  0.0
+ PART_LOC_Y               =  0.0
+ PART_LOC_Z               =  0.0
+ PART_ORI_ZP1             =  0.0
+ PART_ORI_ZP2             =  0.0
+ PART_ORI_ZP3             =  1.0
+ PART_ORI_XP1             =  1.0
+ PART_ORI_XP2             =  0.0
+ PART_ORI_XP3             =  0.0
+ CM_LOCATION_FROM_PART_X  =  2600.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  450.0
+ IXX                      =  8.00E+06
+ IYY                      =  8.00E+06
+ IZZ                      =  1.00E+07
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'diff_output'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  2.0
+ SPRUNG_PERCENTAGE        =  50.0
+$ Part location is dependent.
+$   X,Y,Z location = 2875.0, -125.0, 350.0
+$ Part orientation is dependent.
+$   ZP vector = 0.0,  -1.0,  0.0
+$   XP vector = 1.0,  0.0,  0.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  500.0
+ IYY                      =  500.0
+ IZZ                      =  1000.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$--------------------------------------------------------------------SWITCH_PART
+[SWITCH_PART]
+ USAGE       =  'engine_mount_option'
+ SYMMETRY    =  'single'
+ INDEX       =  1
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'front_engine_mount'
+ SYMMETRY                =  'left/right'
+ ORIENTATION_ZP1         =  6.1232339957E-17
+ ORIENTATION_ZP2         =  0.5
+ ORIENTATION_ZP3         =  0.8660254038
+ ORIENTATION_XP1         =  1.0
+ ORIENTATION_XP2         =  -2.2852220379E-16
+ ORIENTATION_XP3         =  6.1232339957E-17
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_engine_mount.bus'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'rear_engine_mount'
+ SYMMETRY                =  'left/right'
+ ORIENTATION_ZP1         =  6.1232339957E-17
+ ORIENTATION_ZP2         =  0.5
+ ORIENTATION_ZP3         =  0.8660254038
+ ORIENTATION_XP1         =  1.0
+ ORIENTATION_XP2         =  -2.2852220379E-16
+ ORIENTATION_XP3         =  6.1232339957E-17
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_engine_mount.bus'
+$-----------------------------------------------------------------GENERAL_SPLINE
+[GENERAL_SPLINE]
+ USAGE          =  'capacity_factor'
+ SYMMETRY       =  'single'
+ TYPE           =  'two_dimensional'
+ PROPERTY_FILE  =  '<SLIIT_Demo_ThreeWheeler>/torque_converters.tbl/mdi_0001.tcf'
+ CURVE_NAME     =  'CAPACITY_FACTOR'
+$-----------------------------------------------------------------GENERAL_SPLINE
+[GENERAL_SPLINE]
+ USAGE          =  'differential'
+ SYMMETRY       =  'single'
+ TYPE           =  'two_dimensional'
+ PROPERTY_FILE  =  '<SLIIT_Demo_ThreeWheeler>/differentials.tbl/MDI_viscous.dif'
+ CURVE_NAME     =  'DIFFERENTIAL'
+$-----------------------------------------------------------------GENERAL_SPLINE
+[GENERAL_SPLINE]
+ USAGE          =  'engine_torque'
+ SYMMETRY       =  'single'
+ TYPE           =  'three_dimensional'
+ PROPERTY_FILE  =  '<SLIIT_Demo_ThreeWheeler>/powertrains.tbl/V12_engine_map.pwr'
+ CURVE_NAME     =  'ENGINE'
+$-----------------------------------------------------------------GENERAL_SPLINE
+[GENERAL_SPLINE]
+ USAGE          =  'torque_ratio'
+ SYMMETRY       =  'single'
+ TYPE           =  'two_dimensional'
+ PROPERTY_FILE  =  '<SLIIT_Demo_ThreeWheeler>/torque_converters.tbl/mdi_0001.tcf'
+ CURVE_NAME     =  'TORQUE_RATIO'
+$----------------------------------------------------------------------PARAMETER
+[PARAMETER]
+{parameter_name                  symmetry       type       value}
+ 'kinematic_flag              '  'single    '   'integer'  0
+ 'powertrain_type             '  'single    '   'integer'  1
+ 'clutch_capacity             '  'single    '   'real'     1.00E+06
+ 'clutch_close                '  'single    '   'real'     0.25
+ 'clutch_damping              '  'single    '   'real'     100.0
+ 'clutch_open                 '  'single    '   'real'     1.0
+ 'clutch_stiffness            '  'single    '   'real'     10000.0
+ 'clutch_tau                  '  'single    '   'real'     0.05
+ 'drive_torque_bias_front     '  'single    '   'real'     0.0
+ 'ems_gain                    '  'single    '   'real'     0.005
+ 'ems_max_throttle            '  'single    '   'real'     15.0
+ 'engine_idle_speed           '  'single    '   'real'     1000.0
+ 'engine_inertia              '  'single    '   'real'     70000.0
+ 'engine_rev_limit            '  'single    '   'real'     8500.0
+ 'engine_stall_speed          '  'single    '   'real'     500.0
+ 'final_drive                 '  'single    '   'real'     4.11
+ 'gear_downshift_2            '  'single    '   'real'     1000.0
+ 'gear_downshift_3            '  'single    '   'real'     1200.0
+ 'gear_downshift_4            '  'single    '   'real'     1600.0
+ 'gear_downshift_5            '  'single    '   'real'     2000.0
+ 'gear_downshift_6            '  'single    '   'real'     2500.0
+ 'gear_ratio_1                '  'single    '   'real'     3.5
+ 'gear_ratio_2                '  'single    '   'real'     1.94
+ 'gear_ratio_3                '  'single    '   'real'     1.26
+ 'gear_ratio_4                '  'single    '   'real'     0.93
+ 'gear_ratio_5                '  'single    '   'real'     0.76
+ 'gear_ratio_6                '  'single    '   'real'     0.675
+ 'gear_ratio_R                '  'single    '   'real'     -3.0
+ 'gear_sport_1                '  'single    '   'real'     7400.0
+ 'gear_sport_2                '  'single    '   'real'     7200.0
+ 'gear_sport_3                '  'single    '   'real'     7000.0
+ 'gear_sport_4                '  'single    '   'real'     6800.0
+ 'gear_sport_5                '  'single    '   'real'     6500.0
+ 'gear_upshift_1              '  'single    '   'real'     5400.0
+ 'gear_upshift_2              '  'single    '   'real'     5200.0
+ 'gear_upshift_3              '  'single    '   'real'     5000.0
+ 'gear_upshift_4              '  'single    '   'real'     4800.0
+ 'gear_upshift_5              '  'single    '   'real'     4500.0
+ 'gear_upshift_thlds          '  'single    '   'real'     60.0,90.0
+ 'graphics_flag               '  'single    '   'integer'  1
+ 'max_engine_power            '  'single    '   'real'     3.10E+08
+ 'max_engine_torque           '  'single    '   'real'     1.21E+06
+ 'max_gears                   '  'single    '   'integer'  6
+ 'max_throttle                '  'single    '   'real'     100.0
+ 'min_engine_torque           '  'single    '   'real'     -40000.0
+ 'oil_dump_residual           '  'single    '   'real'     0.1
+ 'oil_dump_threshold          '  'single    '   'real'     0.1
+ 'oil_dump_throttle_off       '  'single    '   'real'     1.0
+ 'shift_cycle_time            '  'single    '   'real'     0.5
+ 'sport_flag                  '  'single    '   'integer'  1
+ 'torque_tau                  '  'single    '   'real'     0.1

@@ -1,0 +1,54 @@
+$---------------------------------------------------------------------MDI_HEADER
+[MDI_HEADER]
+ FILE_TYPE     =  'ste'
+ FILE_VERSION  =  3.0
+ FILE_FORMAT   =  'ASCII'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+(BASE)
+{length  force      angle       mass    time}
+ 'mm'    'newton'   'degrees'   'kg'    'sec'
+
+(USER)
+{unit_type    length  force  angle  mass  time  conversion}
+'Nm'             1       1      0      0     0     1E+03
+'MPa'           -2       1      0      0     0     1
+
+$ 1 Nm  = 1e3 Nmm = 1 newton*1000mm
+$ 1 MPa = 1e6 Pa = 1e6 newtons/M^2*(1M/1000mm)^2 = 1
+$--------------------------------------------------------------------TORSION_BAR
+[TORSION_BAR]
+
+(XY_DATA)
+{tbar_deflection <angle>  tbar_torque <Nm>}
+  -18.00                    -28.8
+  -15.00                    -14.4
+  -12.00                     -7.2
+   -9.00                     -3.6
+   -6.00                     -1.2
+    0.00                      0.0
+    6.00                      1.2
+    9.00                      3.6
+   12.00                      7.2
+   15.00                     14.4
+   18.00                     28.8
+$----------------------------------------------------------------STEERING_ASSIST
+[STEERING_ASSIST]
+
+piston_area <area> = 490.87
+
+(XY_DATA)
+{tbar_deflection <angle>  delta_pressure <MPa>}
+        -3.00               -4.00
+        -2.20               -4.00
+        -1.80               -3.60
+        -1.50               -3.00
+        -1.00               -2.00
+        -0.50               -1.00
+         0.00                0.00
+         0.50                1.00
+         1.00                2.00
+         1.50                3.00
+         1.80                3.60
+         2.20                4.00
+         3.00                4.00

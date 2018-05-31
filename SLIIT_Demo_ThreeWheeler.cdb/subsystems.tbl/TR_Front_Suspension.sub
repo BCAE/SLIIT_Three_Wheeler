@@ -1,0 +1,752 @@
+$---------------------------------------------------------------------MDI_HEADER
+[MDI_HEADER]
+ FILE_TYPE     =  'sub'
+ FILE_VERSION  =  7.0
+ FILE_FORMAT   =  'ASCII'
+$---------------------------------------------------------------SUBSYSTEM_HEADER
+[SUBSYSTEM_HEADER]
+ TEMPLATE_NAME  =  '<SLIIT_Demo_ThreeWheeler>/templates.tbl/_double_wishbone.tpl'
+ MAJOR_ROLE     =  'suspension'
+ MINOR_ROLE     =  'front'
+ TIMESTAMP      =  '2018/05/31,10:08:59'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+ LENGTH  =  'mm'
+ FORCE   =  'newton'
+ ANGLE   =  'deg'
+ MASS    =  'kg'
+ TIME    =  'sec'
+$----------------------------------------------------------------------HARDPOINT
+[HARDPOINT]
+{hardpoint_name                  symmetry         x_value    y_value    z_value}
+ 'drive_shaft_inr             '  'left/right'      267.0      -200.0       255.0
+ 'lca_front                   '  'left/right'       67.0      -400.0       180.0
+ 'lca_outer                   '  'left/right'      267.0      -750.0       130.0
+ 'lca_rear                    '  'left/right'      467.0      -450.0       185.0
+ 'lwr_strut_mount             '  'left/right'      267.0      -600.0       180.0
+ 'subframe_front              '  'left/right'     -133.0      -450.0       180.0
+ 'subframe_rear               '  'left/right'      667.0      -450.0       180.0
+ 'tierod_inner                '  'left/right'      467.0      -400.0       330.0
+ 'tierod_outer                '  'left/right'      417.0      -750.0       330.0
+ 'top_mount                   '  'left/right'      307.0      -500.0       680.0
+ 'uca_front                   '  'left/right'      367.0      -450.0       555.0
+ 'uca_outer                   '  'left/right'      307.0      -675.0       555.0
+ 'uca_rear                    '  'left/right'      517.0      -490.0       560.0
+ 'wheel_center                '  'left/right'      267.0      -760.0       330.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'subframe'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  25.0
+ SPRUNG_PERCENTAGE        =  100.0
+ PART_LOC_X               =  0.0
+ PART_LOC_Y               =  0.0
+ PART_LOC_Z               =  0.0
+ PART_ORI_ZP1             =  0.0
+ PART_ORI_ZP2             =  0.0
+ PART_ORI_ZP3             =  1.0
+ PART_ORI_XP1             =  1.0
+ PART_ORI_XP2             =  0.0
+ PART_ORI_XP3             =  0.0
+ CM_LOCATION_FROM_PART_X  =  267.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  180.0
+ IXX                      =  1000.0
+ IYY                      =  1000.0
+ IZZ                      =  1000.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'drive_shaft'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  4.2174529406
+ SPRUNG_PERCENTAGE        =  50.0
+$ Part location is dependent.
+$   X,Y,Z location = 267.0, -200.0, 255.0
+$ Part orientation is dependent.
+$   ZP vector = 1.2122190663E-16,  0.989851986,  -0.1421022373
+$   XP vector = 1.6629451487E-16,  -0.1421022373,  -0.989851986
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  -365.6817014651
+ IXX                      =  1.6598906562E+05
+ IYY                      =  1.6598906562E+05
+ IZZ                      =  692.8258536527
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'drive_shaft'
+ PART        =  'drive_shaft'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  15.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'lower_control_arm'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.6113954942
+ SPRUNG_PERCENTAGE        =  50.0
+$ Part location is dependent.
+$   X,Y,Z location = 267.0, -533.3333333333, 165.0
+$ Part orientation is dependent.
+$   ZP vector = 0.0,  -0.9872025834,  -0.1594711865
+$   XP vector = -0.9994796032,  0.0051440837,  -0.0318443274
+ CM_LOCATION_FROM_PART_X  =  4.7429817801
+ CM_LOCATION_FROM_PART_Y  =  -1.3336604648
+ CM_LOCATION_FROM_PART_Z  =  58.462409286
+ IXX                      =  15081.035188
+ IYY                      =  35508.442498
+ IZZ                      =  20678.602941
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'lca_damper_mount_1'
+ PART        =  'lower_control_arm'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  10.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'lca_damper_mount_2'
+ PART        =  'lower_control_arm'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  10.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'lca_front'
+ PART        =  'lower_control_arm'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  15.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'lca_rear'
+ PART        =  'lower_control_arm'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  15.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'lower_control_arm2'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  0.1
+ SPRUNG_PERCENTAGE        =  50.0
+$ Part location is dependent.
+$   X,Y,Z location = 267.0, -750.0, 130.0
+$ Part orientation is dependent.
+$   ZP vector = 1.2246467991E-16,  1.0,  0.0
+$   XP vector = 1.0,  -1.2246467991E-16,  1.2246467991E-16
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  1.0
+ IYY                      =  1.0
+ IZZ                      =  1.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'lower_strut'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.0
+ SPRUNG_PERCENTAGE        =  50.0
+$ Part location is dependent.
+$   X,Y,Z location = 280.2, -567.0, 345.0
+$ Part orientation is dependent.
+$   ZP vector = 0.0782061887,  0.1955154718,  0.9775773588
+$   XP vector = 0.9968152785,  -1.1102230246E-16,  -0.0797452223
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  100.0
+ IYY                      =  100.0
+ IZZ                      =  100.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'spindle'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.1028403931
+ SPRUNG_PERCENTAGE        =  0.0
+$ Part location is dependent.
+$   X,Y,Z location = 267.0, -760.0, 330.0
+$ Part orientation is dependent.
+$   ZP vector = 0.0,  -0.9999619231,  0.0087265355
+$   XP vector = 1.0,  0.0,  0.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  15.0
+ IXX                      =  477.8975036678
+ IYY                      =  477.8975036678
+ IZZ                      =  496.2781768857
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'tierod_inner'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  0.3337368666
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 442.0, -575.0, 330.0
+$ Part orientation is dependent.
+$   ZP vector = -0.1414213562,  -0.9899494937,  0.0
+$   XP vector = 0.0,  0.0,  1.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  -103.7119441806
+ IXX                      =  1099.7085446652
+ IYY                      =  1099.7085446652
+ IZZ                      =  11.9063568908
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'tierod_inner'
+ PART        =  'tierod_inner'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  8.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'tierod_outer'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  0.3337368666
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 442.0, -575.0, 330.0
+$ Part orientation is dependent.
+$   ZP vector = -0.1414213562,  -0.9899494937,  0.0
+$   XP vector = 0.0,  0.0,  1.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  103.7119441806
+ IXX                      =  1099.7085446652
+ IYY                      =  1099.7085446652
+ IZZ                      =  11.9063568908
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'tierod_outer'
+ PART        =  'tierod_outer'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  8.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'tripot'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.9851127075
+ SPRUNG_PERCENTAGE        =  0.0
+$ Part location is dependent.
+$   X,Y,Z location = 267.0, -200.0, 255.0
+$ Part orientation is dependent.
+$   ZP vector = 1.2246467991E-16,  1.0,  0.0
+$   XP vector = 0.0,  0.0,  1.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  13.8888888889
+ IXX                      =  1101.8600905078
+ IYY                      =  1101.8600905078
+ IZZ                      =  813.8962100926
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'upper_control_arm'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.0318710362
+ SPRUNG_PERCENTAGE        =  50.0
+$ Part location is dependent.
+$   X,Y,Z location = 397.0, -538.3333333333, 556.6666666667
+$ Part orientation is dependent.
+$   ZP vector = -0.5499620453,  -0.8351275502,  -0.0101844823
+$   XP vector = -0.8346102547,  0.5499937972,  -0.0305376121
+ CM_LOCATION_FROM_PART_X  =  -3.2529083883
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  44.4344773926
+ IXX                      =  5913.0454291237
+ IYY                      =  7694.2426386296
+ IZZ                      =  1896.4111447339
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'uca_front'
+ PART        =  'upper_control_arm'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  15.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'uca_rear'
+ PART        =  'upper_control_arm'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  15.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'upper_strut'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.0
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 293.4, -534.0, 510.0
+$ Part orientation is dependent.
+$   ZP vector = 0.0782061887,  0.1955154718,  0.9775773588
+$   XP vector = 0.9968152785,  -1.6653345369E-16,  -0.0797452223
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  100.0
+ IYY                      =  100.0
+ IZZ                      =  100.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'upright'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  1.3972982748
+ SPRUNG_PERCENTAGE        =  0.0
+$ Part location is dependent.
+$   X,Y,Z location = 267.0, -760.0, 330.0
+ PART_ORI_ZP1             =  0.0
+ PART_ORI_ZP2             =  0.0
+ PART_ORI_ZP3             =  1.0
+ PART_ORI_XP1             =  1.0
+ PART_ORI_XP2             =  0.0
+ PART_ORI_XP3             =  0.0
+ CM_LOCATION_FROM_PART_X  =  22.3686741665
+ CM_LOCATION_FROM_PART_Y  =  32.9652892776
+ CM_LOCATION_FROM_PART_Z  =  8.2421429381
+ IXX                      =  13772.4022875338
+ IYY                      =  14621.1881003876
+ IZZ                      =  2825.1326725297
+ IXY                      =  48.8728398575
+ IZX                      =  1089.7940684864
+ IYZ                      =  2379.1968784681
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'upright_lwr'
+ PART        =  'upright'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  15.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'upright_steer_arm'
+ PART        =  'upright'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  15.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'upright_upr'
+ PART        =  'upright'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  15.0
+$--------------------------------------------------------------------SWITCH_PART
+[SWITCH_PART]
+ USAGE       =  'ARB_pickup'
+ SYMMETRY    =  'left/right'
+ INDEX       =  1
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'hub_compliance'
+ SYMMETRY                =  'left/right'
+$ Bushing orientation is dependent.
+$   ZP vector = 0.0,  -0.9999619231,  0.0087265355
+$   XP vector = 1.0,  0.0,  0.0
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  0.0
+ FY_SCALING_FACTOR       =  0.0
+ FZ_SCALING_FACTOR       =  0.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  0.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_hub_compliance.bus'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'subframe_front'
+ SYMMETRY                =  'left/right'
+ ORIENTATION_ZP1         =  0.0
+ ORIENTATION_ZP2         =  0.0
+ ORIENTATION_ZP3         =  1.0
+ ORIENTATION_XP1         =  1.0
+ ORIENTATION_XP2         =  0.0
+ ORIENTATION_XP3         =  0.0
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_subframe.bus'
+(COMMENTS)
+{comment_line}
+'Front Subframe Mount'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'subframe_rear'
+ SYMMETRY                =  'left/right'
+ ORIENTATION_ZP1         =  0.0
+ ORIENTATION_ZP2         =  0.0
+ ORIENTATION_ZP3         =  1.0
+ ORIENTATION_XP1         =  1.0
+ ORIENTATION_XP2         =  0.0
+ ORIENTATION_XP3         =  0.0
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_subframe.bus'
+(COMMENTS)
+{comment_line}
+'Rear Subframe Mount'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'lca_front'
+ SYMMETRY                =  'left/right'
+$ Bushing orientation is dependent.
+$   ZP vector = 0.9922015565,  -0.1240251946,  0.0124025195
+$   XP vector = 0.0124990236,  -1.6145938753E-15,  -0.9999218842
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_lwr_control_arm.bus'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'lca_rear'
+ SYMMETRY                =  'left/right'
+$ Bushing orientation is dependent.
+$   ZP vector = 0.9922015565,  -0.1240251946,  0.0124025195
+$   XP vector = 0.0124990236,  -1.6145938753E-15,  -0.9999218842
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_lwr_control_arm.bus'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'lwr_strut'
+ SYMMETRY                =  'left/right'
+$ Bushing orientation is dependent.
+$   ZP vector = 0.9922015565,  -0.1240251946,  0.0124025195
+$   XP vector = 0.0124990236,  -1.6145938753E-15,  -0.9999218842
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_damper_lwr_mount.bus'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'top_mount'
+ SYMMETRY                =  'left/right'
+ ORIENTATION_ZP1         =  0.0
+ ORIENTATION_ZP2         =  0.0
+ ORIENTATION_ZP3         =  1.0
+ ORIENTATION_XP1         =  1.0
+ ORIENTATION_XP2         =  0.0
+ ORIENTATION_XP3         =  0.0
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_damper_upr_mount.bus'
+(COMMENTS)
+{comment_line}
+'Bushing from Strut to Body'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'uca_front'
+ SYMMETRY                =  'left/right'
+$ Bushing orientation is dependent.
+$   ZP vector = 0.96573417,  -0.257529112,  0.032191139
+$   XP vector = 0.0333148302,  -9.6971042307E-16,  -0.999444907
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_upr_control_arm.bus'
+$---------------------------------------------------------------BUSHING_ASSEMBLY
+[BUSHING_ASSEMBLY]
+ DEFINITION              =  '.ACAR.attachments.ac_bushing'
+ USAGE                   =  'uca_rear'
+ SYMMETRY                =  'left/right'
+$ Bushing orientation is dependent.
+$   ZP vector = -0.96573417,  0.257529112,  -0.032191139
+$   XP vector = -0.0333148302,  -1.0408340856E-16,  0.999444907
+ T_PRELOAD_X             =  0.0
+ T_PRELOAD_Y             =  0.0
+ T_PRELOAD_Z             =  0.0
+ R_PRELOAD_X             =  0.0
+ R_PRELOAD_Y             =  0.0
+ R_PRELOAD_Z             =  0.0
+ T_OFFSET_X              =  0.0
+ T_OFFSET_Y              =  0.0
+ T_OFFSET_Z              =  0.0
+ R_OFFSET_X              =  0.0
+ R_OFFSET_Y              =  0.0
+ R_OFFSET_Z              =  0.0
+ FX_SCALING_FACTOR       =  1.0
+ FY_SCALING_FACTOR       =  1.0
+ FZ_SCALING_FACTOR       =  1.0
+ TX_SCALING_FACTOR       =  1.0
+ TY_SCALING_FACTOR       =  1.0
+ TZ_SCALING_FACTOR       =  1.0
+ TX_DAMPING_FORCE_SCALE  =  1.0
+ TY_DAMPING_FORCE_SCALE  =  1.0
+ TZ_DAMPING_FORCE_SCALE  =  1.0
+ RX_DAMPING_FORCE_SCALE  =  1.0
+ RY_DAMPING_FORCE_SCALE  =  1.0
+ RZ_DAMPING_FORCE_SCALE  =  1.0
+ PROPERTY_FILE           =  '<SLIIT_Demo_ThreeWheeler>/bushings.tbl/MDI_upr_control_arm.bus'
+$---------------------------------------------------------------NSPRING_ASSEMBLY
+[NSPRING_ASSEMBLY]
+ DEFINITION     =  '.ACAR.forces.ac_spring'
+ USAGE          =  'ride_spring'
+ SYMMETRY       =  'left/right'
+ PROPERTY_FILE  =  '<SLIIT_Demo_ThreeWheeler>/springs.tbl/MDI_125_300_spr.xml'
+ VALUE_TYPE     =  'installed_length'
+ USER_VALUE     =  256.0
+$----------------------------------------------------------------DAMPER_ASSEMBLY
+[DAMPER_ASSEMBLY]
+ DEFINITION     =  '.ACAR.forces.ac_damper'
+ USAGE          =  'ride_damper'
+ SYMMETRY       =  'left/right'
+ PROPERTY_FILE  =  '<SLIIT_Demo_ThreeWheeler>/dampers.tbl/MDI_default.dpr'
+$--------------------------------------------------------------BUMPSTOP_ASSEMBLY
+[BUMPSTOP_ASSEMBLY]
+ DEFINITION     =  '.ACAR.forces.ac_bumpstop'
+ USAGE          =  'jounce_stop'
+ SYMMETRY       =  'left/right'
+ PROPERTY_FILE  =  '<SLIIT_Demo_ThreeWheeler>/bumpstops.tbl/MDI_default.bum'
+ DISTANCE_TYPE  =  'clearance'
+ USER_DISTANCE  =  25.0
+$---------------------------------------------------------------ADJUSTABLE_FORCE
+[ADJUSTABLE_FORCE]
+ DEFINITION     =  '.ACAR.forces.ac_aforce'
+ USAGE          =  'camber_adjuster'
+ SYMMETRY       =  'left/right'
+ DESIRED_VALUE  =  -0.5
+ STIFFNESS      =  1.00E+06
+ DAMPING        =  20000.0
+ LOCK           =  1
+$---------------------------------------------------------------ADJUSTABLE_FORCE
+[ADJUSTABLE_FORCE]
+ DEFINITION     =  '.ACAR.forces.ac_aforce'
+ USAGE          =  'toe_adjuster'
+ SYMMETRY       =  'left/right'
+ DESIRED_VALUE  =  0.0
+ STIFFNESS      =  1.00E+06
+ DAMPING        =  20000.0
+ LOCK           =  1
+$----------------------------------------------------------------------PARAMETER
+[PARAMETER]
+{parameter_name                  symmetry       type       value}
+ 'driveline_active            '  'single    '   'integer'  0
+ 'kinematic_flag              '  'single    '   'integer'  0
+ 'adjuster_active             '  'single    '   'integer'  0
+ 'hub_compliance_active       '  'single    '   'integer'  0
+ 'hub_compliance_offset       '  'single    '   'real'     0.0
+ 'subframe_active             '  'single    '   'integer'  0
+ 'camber_adjuster             '  'left/right'   'real'     158.1139
+ 'toe_adjuster                '  'left/right'   'real'     353.5524
+ 'camber_angle                '  'left/right'   'real'     -0.5
+ 'drive_shaft_offset          '  'left/right'   'real'     40.0
+ 'toe_angle                   '  'left/right'   'real'     0.0

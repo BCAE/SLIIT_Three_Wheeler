@@ -1,0 +1,37 @@
+$---------------------------------------------------------------------MDI_HEADER
+[MDI_HEADER]
+ FILE_TYPE     =  'sub'
+ FILE_VERSION  =  7.0
+ FILE_FORMAT   =  'ASCII'
+$---------------------------------------------------------------SUBSYSTEM_HEADER
+[SUBSYSTEM_HEADER]
+ TEMPLATE_NAME  =  '<SLIIT_Demo_ThreeWheeler>/templates.tbl/_handling_tire.tpl'
+ MAJOR_ROLE     =  'wheel'
+ MINOR_ROLE     =  'front'
+ TIMESTAMP      =  '2018/05/31,10:09:00'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+ LENGTH  =  'mm'
+ FORCE   =  'newton'
+ ANGLE   =  'deg'
+ MASS    =  'kg'
+ TIME    =  'sec'
+$-----------------------------------------------------------------WHEEL_ASSEMBLY
+[WHEEL_ASSEMBLY]
+ USAGE                =  'wheel'
+ SYMMETRY             =  'left/right'
+ MASS                 =  25.0
+ SPRUNG_PERCENTAGE    =  0.0
+ IXX                  =  8.00E+05
+ IYY                  =  8.00E+05
+ IZZ                  =  1.00E+06
+ CM_OFFSET            =  0.0
+ WHEEL_CENTER_OFFSET  =  50.0
+ DEFINITION           =  '.ACAR.forces.ac_tire'
+ PROPERTY_FILE        =  '<SLIIT_Demo_ThreeWheeler>/tires.tbl/TR_front_pac89.tir'
+ CONTACT_TYPE         =  'handling'
+$----------------------------------------------------------------------PARAMETER
+[PARAMETER]
+{parameter_name                  symmetry       type       value}
+ 'kinematic_flag              '  'single    '   'integer'  0
+ 'graphics_angle_offset       '  'left/right'   'real'     0.0
