@@ -1,0 +1,226 @@
+$---------------------------------------------------------------------MDI_HEADER
+[MDI_HEADER]
+ FILE_TYPE     =  'sub'
+ FILE_VERSION  =  7.0
+ FILE_FORMAT   =  'ASCII'
+$---------------------------------------------------------------SUBSYSTEM_HEADER
+[SUBSYSTEM_HEADER]
+ TEMPLATE_NAME  =  'mdids://SLIIT_Demo_ThreeWheeler/templates.tbl/_Rear_suspension_Three_wheeler.tpl'
+ MAJOR_ROLE     =  'suspension'
+ MINOR_ROLE     =  'rear'
+ TIMESTAMP      =  '2018/07/02,15:32:55'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+ LENGTH  =  'mm'
+ FORCE   =  'newton'
+ ANGLE   =  'deg'
+ MASS    =  'kg'
+ TIME    =  'sec'
+$----------------------------------------------------------------------HARDPOINT
+[HARDPOINT]
+{hardpoint_name                  symmetry         x_value    y_value    z_value}
+ 'Diff_Position               '  'single    '     2800.0      -100.0       300.0
+ 'Lower_Shock                 '  'left/right'     2906.0      -420.0       304.0
+ 'SA_Lenght                   '  'left/right'     2925.0      -440.5       250.0
+ 'SA_Pivot_point              '  'left/right'     2430.0      -450.5       238.5
+ 'Upper_Shock                 '  'left/right'     2862.0      -420.0       581.0
+ 'Wheel_Center                '  'left/right'     2800.0      -538.5       247.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'subframe'
+ SYMMETRY                 =  'single'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  10.0
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 2800.0, 0.0, 247.0
+ PART_ORI_ZP1             =  0.0
+ PART_ORI_ZP2             =  0.0
+ PART_ORI_ZP3             =  1.0
+ PART_ORI_XP1             =  1.0
+ PART_ORI_XP2             =  0.0
+ PART_ORI_XP3             =  0.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  1.0
+ IYY                      =  1.0
+ IZZ                      =  1.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'driveshaft'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  0.3573476184
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 2800.0, -270.25, 273.5
+$ Part orientation is dependent.
+$   ZP vector = 0.0,  -0.9356432169,  -0.3529472633
+$   XP vector = -1.0,  -3.1780249993E-15,  8.4247643849E-15
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  680.1696364464
+ IYY                      =  680.1696364464
+ IZZ                      =  17.3524755067
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'driveshaft'
+ PART        =  'driveshaft'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  10.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'lower_strut'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  2.0
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 2891.48, -420.0, 395.41
+$ Part orientation is dependent.
+$   ZP vector = -0.1568779491,  2.8818011728E-17,  0.9876179976
+$   XP vector = 0.9876179976,  -1.8142248292E-16,  0.1568779491
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  1.0
+ IYY                      =  1.0
+ IZZ                      =  1.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'Spindle'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  2.0
+ SPRUNG_PERCENTAGE        =  0.0
+$ Part location is dependent.
+$   X,Y,Z location = 2800.0, -538.5, 247.0
+$ Part orientation is dependent.
+$   ZP vector = 0.0,  -1.0,  0.0
+$   XP vector = 1.0,  0.0,  0.0
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  1000.0
+ IYY                      =  1000.0
+ IZZ                      =  1000.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'Swing_Arm'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  10.6066509689
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 2677.5, -445.5, 244.25
+$ Part orientation is dependent.
+$   ZP vector = 0.9995264054,  0.0201924526,  0.0232213205
+$   XP vector = 0.0232260561,  -6.034127191E-16,  -0.9997302388
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  2.1909755934E+05
+ IYY                      =  2.1909755934E+05
+ IZZ                      =  4635.4439626915
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------LINK_GEOMETRY
+[LINK_GEOMETRY]
+ USAGE       =  'Swing_Arm'
+ PART        =  'Swing_Arm'
+ SYMMETRY    =  'left/right'
+ RADIUS      =  30.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'tripot'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  0.1
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 2800.0, -190.0, 300.0
+$ Part orientation is dependent.
+$   ZP vector = 1.2246467991E-16,  1.0,  0.0
+$   XP vector = 1.0,  -1.2246467991E-16,  1.2246467991E-16
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  1.0
+ IYY                      =  1.0
+ IZZ                      =  1.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$------------------------------------------------------------------PART_ASSEMBLY
+[PART_ASSEMBLY]
+ USAGE                    =  'upper_strut'
+ SYMMETRY                 =  'left/right'
+ MODE                     =  'rigid'
+$ Rigid body data:
+ MASS                     =  2.0
+ SPRUNG_PERCENTAGE        =  100.0
+$ Part location is dependent.
+$   X,Y,Z location = 2876.52, -420.0, 489.59
+$ Part orientation is dependent.
+$   ZP vector = -0.1568779491,  2.8818011728E-17,  0.9876179976
+$   XP vector = 0.9876179976,  -1.8142248292E-16,  0.1568779491
+ CM_LOCATION_FROM_PART_X  =  0.0
+ CM_LOCATION_FROM_PART_Y  =  0.0
+ CM_LOCATION_FROM_PART_Z  =  0.0
+ IXX                      =  1.0
+ IYY                      =  1.0
+ IZZ                      =  1.0
+ IXY                      =  0.0
+ IZX                      =  0.0
+ IYZ                      =  0.0
+$---------------------------------------------------------------NSPRING_ASSEMBLY
+[NSPRING_ASSEMBLY]
+ DEFINITION     =  '.ACAR.forces.ac_spring'
+ USAGE          =  'ride_spring'
+ SYMMETRY       =  'left/right'
+ PROPERTY_FILE  =  'mdids://SLIIT_Demo_ThreeWheeler/springs.tbl/mdi_0001.spr'
+ VALUE_TYPE     =  'installed_length'
+ USER_VALUE     =  220.0
+$----------------------------------------------------------------DAMPER_ASSEMBLY
+[DAMPER_ASSEMBLY]
+ DEFINITION     =  '.ACAR.forces.ac_damper'
+ USAGE          =  'ride_damper'
+ SYMMETRY       =  'left/right'
+ PROPERTY_FILE  =  'mdids://acar_shared/dampers.tbl/mdi_0001.dpr'
+$--------------------------------------------------------------BUMPSTOP_ASSEMBLY
+[BUMPSTOP_ASSEMBLY]
+ DEFINITION     =  '.ACAR.forces.ac_bumpstop'
+ USAGE          =  'rear_Bumpstop'
+ SYMMETRY       =  'left/right'
+ PROPERTY_FILE  =  'mdids://acar_shared/bumpstops.tbl/mdi_0001.bum'
+ DISTANCE_TYPE  =  'clearance'
+ USER_DISTANCE  =  200.0
+$----------------------------------------------------------------------PARAMETER
+[PARAMETER]
+{parameter_name                  symmetry       type       value}
+ 'driveline_active            '  'single    '   'integer'  1
+ 'kinematic_flag              '  'single    '   'integer'  0
+ 'SA_Lenght                   '  'single    '   'real'     300.0
+ 'Camber_Angle                '  'left/right'   'real'     0.0
+ 'Toe_Angle                   '  'left/right'   'real'     0.0

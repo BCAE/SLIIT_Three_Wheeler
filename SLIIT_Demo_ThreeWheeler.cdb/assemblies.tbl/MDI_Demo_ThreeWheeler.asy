@@ -10,7 +10,7 @@ $---------------------------------------------------------------------MDI_HEADER
 $----------------------------------------------------------------ASSEMBLY_HEADER
 [ASSEMBLY_HEADER]
  ASSEMBLY_CLASS  =  'full_vehicle'
- TIMESTAMP       =  '2018/05/31,10:14:27'
+ TIMESTAMP       =  '2018/07/03,08:53:03'
  HEADER_SIZE     =  5
 $------------------------------------------------------------------------PLUGINS
 [PLUGINS]
@@ -31,14 +31,6 @@ $       Minor Role : front
 $       Template   : _double_wishbone
 
  USAGE  =  '<SLIIT_Demo_ThreeWheeler>/subsystems.tbl/TR_Front_Suspension.sub'
-$----------------------------------------------------------------------SUBSYSTEM
-[SUBSYSTEM]
-$ Subsystem information:
-$       Major Role : suspension
-$       Minor Role : rear
-$       Template   : _double_wishbone
-
- USAGE  =  '<SLIIT_Demo_ThreeWheeler>/subsystems.tbl/TR_Rear_Suspension.sub'
 $----------------------------------------------------------------------SUBSYSTEM
 [SUBSYSTEM]
 $ Subsystem information:
@@ -87,6 +79,14 @@ $       Minor Role : any
 $       Template   : _brake_system_4Wdisk
 
  USAGE  =  '<SLIIT_Demo_ThreeWheeler>/subsystems.tbl/TR_Brake_System.sub'
+$----------------------------------------------------------------------SUBSYSTEM
+[SUBSYSTEM]
+$ Subsystem information:
+$       Major Role : suspension
+$       Minor Role : rear
+$       Template   : _Rear_suspension_Three_wheeler
+
+ USAGE  =  '<SLIIT_Demo_ThreeWheeler>/subsystems.tbl/TW_Rear_Suspension.sub'
 $------------------------------------------------------------------------TESTRIG
 [TESTRIG]
  USAGE  =  '__MDI_SDI_TESTRIG'
@@ -99,7 +99,7 @@ $----------------------------------------------------------------------HARDPOINT
 $----------------------------------------------------------------------PARAMETER
 [PARAMETER]
 {parameter_name                  symmetry       type       value}
- 'initial_engine_rpm          '  'single    '   'real'     2000.0
+ 'initial_engine_rpm          '  'single    '   'real'     3037.5467245037
  'throttle_lag_brake_demand   '  'single    '   'real'     0.1
   'Specifies the time that must pass after the throttle_demand=0 before the pd-controller will apply the brakes'
  'brake_ratio                 '  'single    '   'real'     0.55
