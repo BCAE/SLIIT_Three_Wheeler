@@ -11,7 +11,7 @@ $----------------------------------------------------------------TEMPLATE_HEADER
 [TEMPLATE_HEADER]
  TEMPLATE_NAME  =  '_Rear_suspension_Three_wheeler'
  MAJOR_ROLE     =  'suspension'
- TIMESTAMP      =  '2018/06/05,18:38:14'
+ TIMESTAMP      =  '2018/07/02,16:03:48'
  HEADER_SIZE    =  6
 $------------------------------------------------------------------------PLUGINS
 [PLUGINS]
@@ -80,6 +80,11 @@ data_element attributes  &
    data_element_name = ._Rear_suspension_Three_wheeler._cv_array  &
    visibility = off
 !
+data_element create array ic_array  &
+   array_name = ._Rear_suspension_Three_wheeler.suspension_parameters_ARRAY  &
+   size = 1  &
+   numbers = 0.0
+!
 data_element create spline  &
    spline_name = ._Rear_suspension_Three_wheeler._cv_spline  &
    comments = "Dummy for communicators"  &
@@ -129,6 +134,42 @@ defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
 ! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner  &
+   location = 1900.0, -200.0, 300.0  &
+   orientation = 180.0d, 90.0d, 180.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner  &
+   location = 1900.0, 0.0, 300.0  &
+   orientation = 0.0d, 90.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer  &
+   location = 1900.0, -340.5, 247.0  &
+   orientation = 0.0d, 90.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer  &
+   location = 1900.0, 340.5, 247.0  &
+   orientation = 180.0d, 90.0d, 180.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer  &
+   color = MAIZE
 !
 marker create  &
    marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center  &
@@ -329,6 +370,98 @@ marker attributes  &
    marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_lower_spring_seat  &
    color = MAIZE
 !
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_Hooke_joint_outer_iaxis  &
+   location = 1900.0, 340.5, 247.0  &
+   orientation = 180.0d, 90.0d, 180.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_Hooke_joint_outer_iaxis  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_Hooke_joint_outer_iaxis  &
+   location = 1900.0, -340.5, 247.0  &
+   orientation = 0.0d, 90.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_Hooke_joint_outer_iaxis  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_outer_jaxis  &
+   location = 1900.0, -340.5, 247.0  &
+   orientation = 180.0d, 69.3323107683d, 180.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_outer_jaxis  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_outer_jaxis  &
+   location = 1900.0, 340.5, 247.0  &
+   orientation = 0.0d, 81.1527090535d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_outer_jaxis  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_iaxis  &
+   location = 1900.0, -200.0, 300.0  &
+   orientation = 0.0d, 110.6676892317d, 180.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_iaxis  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_iaxis  &
+   location = 1900.0, 0.0, 300.0  &
+   orientation = 180.0d, 98.8472909465d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_iaxis  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_jaxis  &
+   location = 1900.0, -200.0, 300.0  &
+   orientation = 180.0d, 90.0d, 90.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_jaxis  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_jaxis  &
+   location = 1900.0, 0.0, 300.0  &
+   orientation = 0.0d, 90.0d, 270.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_jaxis  &
+   color = MAIZE
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.mtl_mount_j_2  &
+   location = 1900.0, -200.0, 300.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.mtl_mount_j_2  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.mtr_mount_j_2  &
+   location = 1900.0, 0.0, 300.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.mtr_mount_j_2  &
+   visibility = off  &
+   name_visibility = off
+!
 ! ****** Points for current part ******
 !
 point create  &
@@ -380,6 +513,10 @@ point create  &
    point_name = ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght  &
    location = 2025.0, 440.5, 250.0
 !
+point create  &
+   point_name = ._Rear_suspension_Three_wheeler.ground.hps_Diff_Position  &
+   location = 1900.0, -100.0, 300.0
+!
 ! ****** Graphics for current part ******
 !
 geometry create shape ellipsoid  &
@@ -392,6 +529,194 @@ geometry create shape ellipsoid  &
 geometry attributes  &
    geometry_name = ._Rear_suspension_Three_wheeler.ground._cv_csolid  &
    visibility = off
+!
+!------------------------------- gel_driveshaft -------------------------------!
+!
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part create rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_driveshaft  &
+   location = 1900.0, -270.25, 273.5  &
+   orientation = 0.0d, 110.6676892317d, 180.0d
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.gel_driveshaft
+!
+! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.cm  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.cm  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.inertia_frame  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.gralin_3  &
+   location = 0.0, 0.0, -75.0820384646  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.gralin_3  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_j_6  &
+   location = 0.0, 0.0, 75.0820384646  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_j_6  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_i_7  &
+   location = 0.0, 0.0, -75.0820384646  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_i_7  &
+   visibility = off  &
+   name_visibility = off
+!
+part create rigid_body mass_properties  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_driveshaft  &
+   mass = 0.3573476184  &
+   center_of_mass_marker = ._Rear_suspension_Three_wheeler.gel_driveshaft.cm  &
+   inertia_marker =   &
+                    ._Rear_suspension_Three_wheeler.gel_driveshaft.inertia_frame  &
+   ixx = 680.1696364464  &
+   iyy = 680.1696364464  &
+   izz = 17.3524755067  &
+   ixy = 0.0  &
+   izx = 0.0  &
+   iyz = 0.0
+!
+! ****** Graphics for current part ******
+!
+geometry create shape cylinder  &
+   cylinder_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.gralin_driveshaft  &
+   center_marker = ._Rear_suspension_Three_wheeler.gel_driveshaft.gralin_3  &
+   angle_extent = 360.0  &
+   length = 150.1640769292  &
+   radius = 10.0  &
+   side_count_for_body = 15  &
+   segment_count_for_ends = 15
+!
+geometry attributes  &
+   geometry_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.gralin_driveshaft  &
+   color = MAGENTA
+!
+part attributes  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_driveshaft  &
+   visibility = on  &
+   name_visibility = on
+!
+!------------------------------- ger_driveshaft -------------------------------!
+!
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part create rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_driveshaft  &
+   location = 1900.0, 170.25, 273.5  &
+   orientation = 180.0d, 98.8472909465d, 0.0d
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ger_driveshaft
+!
+! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.cm  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 90.0d, 180.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.cm  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.inertia_frame  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.gralin_4  &
+   location = 0.0, 0.0, -172.3000652931  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.gralin_4  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_j_6  &
+   location = 0.0, 0.0, 172.3000652931  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_j_6  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_i_7  &
+   location = 0.0, 0.0, -172.3000652931  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_i_7  &
+   visibility = off  &
+   name_visibility = off
+!
+part create rigid_body mass_properties  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_driveshaft  &
+   mass = 0.820049898  &
+   center_of_mass_marker = ._Rear_suspension_Three_wheeler.ger_driveshaft.cm  &
+   inertia_marker =   &
+                    ._Rear_suspension_Three_wheeler.ger_driveshaft.inertia_frame  &
+   ixx = 8134.9363011633  &
+   iyy = 8134.9363011633  &
+   izz = 39.8208775886  &
+   ixy = 0.0  &
+   izx = 0.0  &
+   iyz = 0.0
+!
+! ****** Graphics for current part ******
+!
+geometry create shape cylinder  &
+   cylinder_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.gralin_driveshaft  &
+   center_marker = ._Rear_suspension_Three_wheeler.ger_driveshaft.gralin_4  &
+   angle_extent = 360.0  &
+   length = 344.6001305862  &
+   radius = 10.0  &
+   side_count_for_body = 15  &
+   segment_count_for_ends = 15
+!
+geometry attributes  &
+   geometry_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.gralin_driveshaft  &
+   color = MAGENTA
+!
+part attributes  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_driveshaft  &
+   visibility = on  &
+   name_visibility = on
 !
 !------------------------------ gel_lower_strut -------------------------------!
 !
@@ -408,6 +733,16 @@ defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.gel_lower_strut
 !
 ! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_lower_strut.bul_bumpstop_j_1  &
+   location = 0.0, 0.0, -92.556028977  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_lower_strut.bul_bumpstop_j_1  &
+   visibility = off  &
+   name_visibility = off
 !
 marker create  &
    marker_name = ._Rear_suspension_Three_wheeler.gel_lower_strut.cm  &
@@ -523,6 +858,16 @@ defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ger_lower_strut
 !
 ! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_lower_strut.bur_bumpstop_j_1  &
+   location = 0.0, 0.0, -92.556028977  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_lower_strut.bur_bumpstop_j_1  &
+   visibility = off  &
+   name_visibility = off
 !
 marker create  &
    marker_name = ._Rear_suspension_Three_wheeler.ger_lower_strut.cm  &
@@ -694,6 +1039,26 @@ marker attributes  &
    visibility = off  &
    name_visibility = off
 !
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.coomarker_1  &
+   location = -54.4267279588, 20.8540478771, 230.294165082  &
+   orientation = 269.8436814841d, 97.6932743643d, 88.8324685725d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.coomarker_1  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.mas_kp1_1  &
+   location = 9.5933709781E-002, -95.4552362812, 120.6279452002  &
+   orientation = 270.0268784558d, 88.6693967372d, 88.8426669319d
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.mal_kp1_2  &
+   location = -54.4267279588, 20.8540478771, 230.294165082  &
+   orientation = 270.0268784558d, 88.6693967372d, 88.8426669319d
+!
 part create rigid_body mass_properties  &
    part_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm  &
    mass = 10.6066509689  &
@@ -797,6 +1162,21 @@ marker attributes  &
    marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_3  &
    visibility = off  &
    name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.coomarker_2  &
+   location = -54.4267279588, -20.8540478771, 230.294165082  &
+   orientation = 270.1563185159d, 97.6932743643d, 91.1675314275d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.coomarker_2  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.mar_kp1_2  &
+   location = -54.4267279588, -20.8540478771, 230.294165082  &
+   orientation = 269.9731215442d, 88.6693967372d, 91.1573330681d
 !
 part create rigid_body mass_properties  &
    part_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm  &
@@ -926,6 +1306,16 @@ marker attributes  &
    visibility = off  &
    name_visibility = off
 !
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.jxl_joint_i_6  &
+   location = 0.0, 0.0, -198.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.jxl_joint_i_6  &
+   visibility = off  &
+   name_visibility = off
+!
 part create rigid_body mass_properties  &
    part_name = ._Rear_suspension_Three_wheeler.gel_Spindle  &
    mass = 2.0  &
@@ -1010,6 +1400,16 @@ marker attributes  &
    visibility = off  &
    name_visibility = off
 !
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.jxr_joint_i_6  &
+   location = 0.0, 0.0, -198.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.jxr_joint_i_6  &
+   visibility = off  &
+   name_visibility = off
+!
 part create rigid_body mass_properties  &
    part_name = ._Rear_suspension_Three_wheeler.ger_Spindle  &
    mass = 2.0  &
@@ -1089,6 +1489,11 @@ marker attributes  &
    visibility = off  &
    name_visibility = off
 !
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.mas_kp2_1  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
 part attributes  &
    part_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body  &
    visibility = on  &
@@ -1140,6 +1545,11 @@ marker attributes  &
    visibility = off  &
    name_visibility = off
 !
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.mas_kp2_2  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
 part attributes  &
    part_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body  &
    visibility = on  &
@@ -1160,6 +1570,16 @@ defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.gel_upper_strut
 !
 ! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.bul_bumpstop_i_1  &
+   location = 0.0, 0.0, 92.556028977  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.bul_bumpstop_i_1  &
+   visibility = off  &
+   name_visibility = off
 !
 marker create  &
    marker_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.cm  &
@@ -1265,6 +1685,16 @@ defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ger_upper_strut
 !
 ! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.bur_bumpstop_i_1  &
+   location = 0.0, 0.0, 92.556028977  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.bur_bumpstop_i_1  &
+   visibility = off  &
+   name_visibility = off
 !
 marker create  &
    marker_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.cm  &
@@ -1475,6 +1905,274 @@ part attributes  &
    visibility = on  &
    name_visibility = on
 !
+!--------------------------------- gel_tripot ---------------------------------!
+!
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part create rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_tripot  &
+   location = 1900.0, -190.0, 300.0  &
+   orientation = 180.0d, 90.0d, 180.0d
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.gel_tripot
+!
+! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.cm  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.cm  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.inertia_frame  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.gracyl_7  &
+   location = 0.0, 0.0, -10.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.gracyl_7  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_j_7  &
+   location = 0.0, 0.0, -10.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_j_7  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_i_8  &
+   location = 0.0, 0.0, -10.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_i_8  &
+   visibility = off  &
+   name_visibility = off
+!
+part create rigid_body mass_properties  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_tripot  &
+   mass = 0.1  &
+   center_of_mass_marker = ._Rear_suspension_Three_wheeler.gel_tripot.cm  &
+   inertia_marker = ._Rear_suspension_Three_wheeler.gel_tripot.inertia_frame  &
+   ixx = 1.0  &
+   iyy = 1.0  &
+   izz = 1.0  &
+   ixy = 0.0  &
+   izx = 0.0  &
+   iyz = 0.0
+!
+! ****** Graphics for current part ******
+!
+geometry create shape cylinder  &
+   cylinder_name = ._Rear_suspension_Three_wheeler.gel_tripot.gracyl_tripot  &
+   center_marker = ._Rear_suspension_Three_wheeler.gel_tripot.gracyl_7  &
+   angle_extent = 360.0  &
+   length = 30.0  &
+   radius = 15.0  &
+   side_count_for_body = 15  &
+   segment_count_for_ends = 15
+!
+geometry attributes  &
+   geometry_name = ._Rear_suspension_Three_wheeler.gel_tripot.gracyl_tripot  &
+   color = DARK_GRAY
+!
+part attributes  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_tripot  &
+   visibility = on  &
+   name_visibility = on
+!
+!--------------------------------- ger_tripot ---------------------------------!
+!
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part create rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_tripot  &
+   location = 1900.0, -10.0, 300.0  &
+   orientation = 0.0d, 90.0d, 0.0d
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ger_tripot
+!
+! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.cm  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.cm  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.inertia_frame  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.gracyl_8  &
+   location = 0.0, 0.0, -10.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.gracyl_8  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_j_7  &
+   location = 0.0, 0.0, -10.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_j_7  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_i_8  &
+   location = 0.0, 0.0, -10.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_i_8  &
+   visibility = off  &
+   name_visibility = off
+!
+part create rigid_body mass_properties  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_tripot  &
+   mass = 0.1  &
+   center_of_mass_marker = ._Rear_suspension_Three_wheeler.ger_tripot.cm  &
+   inertia_marker = ._Rear_suspension_Three_wheeler.ger_tripot.inertia_frame  &
+   ixx = 1.0  &
+   iyy = 1.0  &
+   izz = 1.0  &
+   ixy = 0.0  &
+   izx = 0.0  &
+   iyz = 0.0
+!
+! ****** Graphics for current part ******
+!
+geometry create shape cylinder  &
+   cylinder_name = ._Rear_suspension_Three_wheeler.ger_tripot.gracyl_tripot  &
+   center_marker = ._Rear_suspension_Three_wheeler.ger_tripot.gracyl_8  &
+   angle_extent = 360.0  &
+   length = 30.0  &
+   radius = 15.0  &
+   side_count_for_body = 15  &
+   segment_count_for_ends = 15
+!
+geometry attributes  &
+   geometry_name = ._Rear_suspension_Three_wheeler.ger_tripot.gracyl_tripot  &
+   color = DARK_GRAY
+!
+part attributes  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_tripot  &
+   visibility = on  &
+   name_visibility = on
+!
+!------------------------- mtl_tripot_to_differential -------------------------!
+!
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part create rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential  &
+   location = 1900.0, -200.0, 300.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential
+!
+! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.mount_i  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.mount_i  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.jxl_joint_j_8  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 180.0d, 90.0d, 180.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.jxl_joint_j_8  &
+   visibility = off  &
+   name_visibility = off
+!
+part attributes  &
+   part_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential  &
+   visibility = on  &
+   name_visibility = on
+!
+!------------------------- mtr_tripot_to_differential -------------------------!
+!
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part create rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential  &
+   location = 1900.0, 0.0, 300.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential
+!
+! ****** Markers for current part ******
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.mount_i  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 0.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.mount_i  &
+   visibility = off  &
+   name_visibility = off
+!
+marker create  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.jxr_joint_j_8  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0d, 90.0d, 0.0d
+!
+marker attributes  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.jxr_joint_j_8  &
+   visibility = off  &
+   name_visibility = off
+!
+part attributes  &
+   part_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential  &
+   visibility = on  &
+   name_visibility = on
+!
 !--------------------------------- Equations ----------------------------------!
 !
 !
@@ -1628,6 +2326,80 @@ constraint create joint fixed  &
    j_marker_name =   &
                    ._Rear_suspension_Three_wheeler.mts_subframe_to_body.jxs_joint_j_1
 !
+constraint create joint hooke  &
+   joint_name = ._Rear_suspension_Three_wheeler.jolhoo_Driveshaft_Outer  &
+   i_marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.jxl_joint_i_6  &
+   j_marker_name =   &
+                   ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_j_6
+!
+constraint create joint hooke  &
+   joint_name = ._Rear_suspension_Three_wheeler.jorhoo_Driveshaft_Outer  &
+   i_marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.jxr_joint_i_6  &
+   j_marker_name =   &
+                   ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_j_6
+!
+constraint create joint convel  &
+   joint_name = ._Rear_suspension_Three_wheeler.jolcon_driveshaft_Inner  &
+   i_marker_name =   &
+                   ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_i_7  &
+   j_marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_j_7
+!
+constraint attributes  &
+   constraint_name = ._Rear_suspension_Three_wheeler.jolcon_driveshaft_Inner  &
+   size_of_icons = 10.0
+!
+constraint create joint convel  &
+   joint_name = ._Rear_suspension_Three_wheeler.jorcon_driveshaft_Inner  &
+   i_marker_name =   &
+                   ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_i_7  &
+   j_marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_j_7
+!
+constraint attributes  &
+   constraint_name = ._Rear_suspension_Three_wheeler.jorcon_driveshaft_Inner  &
+   size_of_icons = 10.0
+!
+constraint create joint fixed  &
+   joint_name = ._Rear_suspension_Three_wheeler.mtl_fixed_2  &
+   i_marker_name =   &
+                   ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.mount_i  &
+   j_marker_name = ._Rear_suspension_Three_wheeler.ground.mtl_mount_j_2
+!
+constraint attributes  &
+   constraint_name = ._Rear_suspension_Three_wheeler.mtl_fixed_2  &
+   visibility = off  &
+   name_visibility = off
+!
+constraint create joint fixed  &
+   joint_name = ._Rear_suspension_Three_wheeler.mtr_fixed_2  &
+   i_marker_name =   &
+                   ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.mount_i  &
+   j_marker_name = ._Rear_suspension_Three_wheeler.ground.mtr_mount_j_2
+!
+constraint attributes  &
+   constraint_name = ._Rear_suspension_Three_wheeler.mtr_fixed_2  &
+   visibility = off  &
+   name_visibility = off
+!
+constraint create joint translational  &
+   joint_name = ._Rear_suspension_Three_wheeler.joltra_tripot_to_differential  &
+   i_marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_i_8  &
+   j_marker_name =   &
+                   ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.jxl_joint_j_8
+!
+constraint attributes  &
+   constraint_name = ._Rear_suspension_Three_wheeler.joltra_tripot_to_differential  &
+   size_of_icons = 10.0
+!
+constraint create joint translational  &
+   joint_name = ._Rear_suspension_Three_wheeler.jortra_tripot_to_differential  &
+   i_marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_i_8  &
+   j_marker_name =   &
+                   ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.jxr_joint_j_8
+!
+constraint attributes  &
+   constraint_name = ._Rear_suspension_Three_wheeler.jortra_tripot_to_differential  &
+   size_of_icons = 10.0
+!
 !------------------------------ Joint Primitives ------------------------------!
 !
 !
@@ -1717,6 +2489,26 @@ ude create instance  &
 ude attributes  &
    instance_name = ._Rear_suspension_Three_wheeler.nsr_ride_spring  &
    color = SILVER
+!
+ude create instance  &
+   instance_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop  &
+   definition_name = .ACAR.forces.ac_bumpstop  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0, 0.0, 0.0
+!
+ude attributes  &
+   instance_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop  &
+   color = MIDNIGHT_BLUE
+!
+ude create instance  &
+   instance_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop  &
+   definition_name = .ACAR.forces.ac_bumpstop  &
+   location = 0.0, 0.0, 0.0  &
+   orientation = 0.0, 0.0, 0.0
+!
+ude attributes  &
+   instance_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop  &
+   color = MIDNIGHT_BLUE
 !
 !-------------------------- Adams View UDE Instance ---------------------------!
 !
@@ -1894,6 +2686,98 @@ variable modify  &
 ude modify instance  &
    instance_name = ._Rear_suspension_Three_wheeler.nsr_ride_spring
 !
+!-------------------------- Adams View UDE Instance ---------------------------!
+!
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.property_file  &
+   string_value = "mdids://acar_shared/bumpstops.tbl/mdi_0001.bum"
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.user_distance  &
+   real_value = 200.0
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.distance_type  &
+   string_value = "clearance"
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.scale_factor  &
+   real_value = 1.0
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.diameter  &
+   real_value = 150.0
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.method  &
+   integer_value = -1
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.dampingMethod  &
+   integer_value = -1
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.geoScale  &
+   real_value = 0.2
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.i_marker  &
+   object_value = ._Rear_suspension_Three_wheeler.gel_upper_strut.bul_bumpstop_i_1
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop.j_marker  &
+   object_value = ._Rear_suspension_Three_wheeler.gel_lower_strut.bul_bumpstop_j_1
+!
+ude modify instance  &
+   instance_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop
+!
+!-------------------------- Adams View UDE Instance ---------------------------!
+!
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.property_file  &
+   string_value = "mdids://acar_shared/bumpstops.tbl/mdi_0001.bum"
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.user_distance  &
+   real_value = 200.0
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.distance_type  &
+   string_value = "clearance"
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.scale_factor  &
+   real_value = 1.0
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.diameter  &
+   real_value = 150.0
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.method  &
+   integer_value = -1
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.dampingMethod  &
+   integer_value = -1
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.geoScale  &
+   real_value = 0.2
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.i_marker  &
+   object_value = ._Rear_suspension_Three_wheeler.ger_upper_strut.bur_bumpstop_i_1
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop.j_marker  &
+   object_value = ._Rear_suspension_Three_wheeler.ger_lower_strut.bur_bumpstop_j_1
+!
+ude modify instance  &
+   instance_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop
+!
 undo end_block
 !
 !---------------------------------- Motions -----------------------------------!
@@ -1925,6 +2809,30 @@ force create body gravitational  &
 !
 !---------------------------- Adams View Variables ----------------------------!
 !
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.sml_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.smr_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.gel_lower_strut.sml_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.ger_lower_strut.smr_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
 !
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.sml_sprung_mass_percent  &
@@ -1964,6 +2872,68 @@ variable create  &
 !
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.dependents  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.sml_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.display_graphics  &
+   string_value = "yes"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.smr_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.display_graphics  &
+   string_value = "yes"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.ges_subframe.sms_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body.minor_role  &
+   string_value = "inherit"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body.dependents  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.gel_tripot.sml_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.ger_tripot.smr_sprung_mass_percent  &
+   range = 0.0, 100.0  &
+   delta_type = relative  &
+   real_value = 100.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.minor_role  &
+   string_value = "any"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.dependents  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.minor_role  &
+   string_value = "any"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.dependents  &
    object_value = (NONE)
 !
 variable create  &
@@ -2029,7 +2999,7 @@ variable create  &
 !
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body.matching_name  &
-   string_value = "Upper_Strut_To_Body"
+   string_value = "strut_to_body"
 !
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body.entity  &
@@ -2046,7 +3016,7 @@ variable create  &
 !
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body.matching_name  &
-   string_value = "Upper_Strut_To_Body"
+   string_value = "strut_to_body"
 !
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body.entity  &
@@ -2055,52 +3025,6 @@ variable create  &
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body.minor_role  &
    string_value = "any"
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.gel_lower_strut.sml_sprung_mass_percent  &
-   range = 0.0, 100.0  &
-   delta_type = relative  &
-   real_value = 100.0
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.ger_lower_strut.smr_sprung_mass_percent  &
-   range = 0.0, 100.0  &
-   delta_type = relative  &
-   real_value = 100.0
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.sml_sprung_mass_percent  &
-   range = 0.0, 100.0  &
-   delta_type = relative  &
-   real_value = 100.0
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.display_graphics  &
-   string_value = "yes"
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.smr_sprung_mass_percent  &
-   range = 0.0, 100.0  &
-   delta_type = relative  &
-   real_value = 100.0
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.display_graphics  &
-   string_value = "yes"
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.ges_subframe.sms_sprung_mass_percent  &
-   range = 0.0, 100.0  &
-   delta_type = relative  &
-   real_value = 100.0
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body.minor_role  &
-   string_value = "inherit"
-!
-variable create  &
-   variable_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body.dependents  &
-   object_value = (NONE)
 !
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.cis_subframe_to_body  &
@@ -2118,6 +3042,290 @@ variable create  &
 variable create  &
    variable_name = ._Rear_suspension_Three_wheeler.cis_subframe_to_body.minor_role  &
    string_value = "inherit"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_tripot_to_differential  &
+   object_value = (NONE)  &
+   comments = "Autocreated for mount part: mtl_tripot_to_differential"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_tripot_to_differential.matching_name  &
+   string_value = "tripot_to_differential"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_tripot_to_differential.entity  &
+   string_value = "mount"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_tripot_to_differential.minor_role  &
+   string_value = "any"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_tripot_to_differential  &
+   object_value = (NONE)  &
+   comments = "Autocreated for mount part: mtr_tripot_to_differential"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_tripot_to_differential.matching_name  &
+   string_value = "tripot_to_differential"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_tripot_to_differential.entity  &
+   string_value = "mount"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_tripot_to_differential.minor_role  &
+   string_value = "any"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference.matching_name  &
+   string_value = "chassis_path_reference"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference.entity  &
+   string_value = "marker"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference.minor_role  &
+   string_value = "inherit"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference_adams_id  &
+   integer_value = 0  &
+   comments =   &
+              "Passes the adams_id of the marker (used in function expressions)"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference_adams_id.matching_name  &
+   string_value = "chassis_path_reference_adams_id"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference_adams_id.entity  &
+   string_value = "marker"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference_adams_id.minor_role  &
+   string_value = "inherit"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_wheel_center  &
+   units = "length"  &
+   real_value = 1900.0, -538.5, 247.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_wheel_center.matching_name  &
+   string_value = "wheel_center"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_wheel_center.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_wheel_center.entity  &
+   string_value = "location"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_wheel_center  &
+   units = "length"  &
+   real_value = 1900.0, 538.5, 247.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_wheel_center.matching_name  &
+   string_value = "wheel_center"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_wheel_center.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_wheel_center.entity  &
+   string_value = "location"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_upright  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_upright.matching_name  &
+   string_value = "suspension_upright"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_upright.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_upright.entity  &
+   string_value = "mount"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_upright  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_upright.matching_name  &
+   string_value = "suspension_upright"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_upright.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_upright.entity  &
+   string_value = "mount"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_tripot_to_differential  &
+   units = "length"  &
+   real_value = 1900.0, -200.0, 300.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_tripot_to_differential.matching_name  &
+   string_value = "tripot_to_differential"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_tripot_to_differential.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_tripot_to_differential.entity  &
+   string_value = "location"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_tripot_to_differential  &
+   units = "length"  &
+   real_value = 1900.0, 0.0, 300.0
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_tripot_to_differential.matching_name  &
+   string_value = "tripot_to_differential"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_tripot_to_differential.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_tripot_to_differential.entity  &
+   string_value = "location"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_mount  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_mount.matching_name  &
+   string_value = "suspension_mount"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_mount.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_mount.entity  &
+   string_value = "mount"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_mount  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_mount.matching_name  &
+   string_value = "suspension_mount"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_mount.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_mount.entity  &
+   string_value = "mount"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_ride_height_ref  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_ride_height_ref.matching_name  &
+   string_value = "svs_ride_height"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_ride_height_ref.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_ride_height_ref.entity  &
+   string_value = "marker"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_ride_height_ref  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_ride_height_ref.matching_name  &
+   string_value = "svs_ride_height"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_ride_height_ref.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_ride_height_ref.entity  &
+   string_value = "marker"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_suspension_parameters_ARRAY  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_suspension_parameters_ARRAY.matching_name  &
+   string_value = "suspension_parameters_ARRAY"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_suspension_parameters_ARRAY.minor_role  &
+   string_value = "inherit"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_suspension_parameters_ARRAY.entity  &
+   string_value = "array"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.phs_driveline_active  &
+   integer_value = 1
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_driveline_active  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_driveline_active.matching_name  &
+   string_value = "driveline_active"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_driveline_active.minor_role  &
+   string_value = "any"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_driveline_active.entity  &
+   string_value = "parameter_integer"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_engine_to_subframe  &
+   object_value = (NONE)
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_engine_to_subframe.matching_name  &
+   string_value = "engine_to_subframe"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_engine_to_subframe.minor_role  &
+   string_value = "rear"
+!
+variable create  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_engine_to_subframe.entity  &
+   string_value = "mount"
 !
 !---------------------------- Adams View Functions ----------------------------!
 !
@@ -2155,6 +3363,21 @@ variable modify  &
                   ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body
 !
 variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body.dependents  &
+   object_value = ._Rear_suspension_Three_wheeler.mts_fixed_1,  &
+                  ._Rear_suspension_Three_wheeler.cis_subframe_to_body
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.dependents  &
+   object_value = ._Rear_suspension_Three_wheeler.mtl_fixed_2,  &
+                  ._Rear_suspension_Three_wheeler.cil_tripot_to_differential
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.dependents  &
+   object_value = ._Rear_suspension_Three_wheeler.mtr_fixed_2,  &
+                  ._Rear_suspension_Three_wheeler.cir_tripot_to_differential
+!
+variable modify  &
    variable_name = ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body  &
    object_value = ._Rear_suspension_Three_wheeler.ground.mtl_mount_j_1,  &
                   ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body,  &
@@ -2167,15 +3390,63 @@ variable modify  &
                   ._Rear_suspension_Three_wheeler.mtr_fixed_1
 !
 variable modify  &
-   variable_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body.dependents  &
-   object_value = ._Rear_suspension_Three_wheeler.mts_fixed_1,  &
-                  ._Rear_suspension_Three_wheeler.cis_subframe_to_body
-!
-variable modify  &
    variable_name = ._Rear_suspension_Three_wheeler.cis_subframe_to_body  &
    object_value = ._Rear_suspension_Three_wheeler.ground.mts_mount_j_1,  &
                   ._Rear_suspension_Three_wheeler.mts_subframe_to_body,  &
                   ._Rear_suspension_Three_wheeler.mts_fixed_1
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_tripot_to_differential  &
+   object_value = ._Rear_suspension_Three_wheeler.ground.mtl_mount_j_2,  &
+                  ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential,  &
+                  ._Rear_suspension_Three_wheeler.mtl_fixed_2
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_tripot_to_differential  &
+   object_value = ._Rear_suspension_Three_wheeler.ground.mtr_mount_j_2,  &
+                  ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential,  &
+                  ._Rear_suspension_Three_wheeler.mtr_fixed_2
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference  &
+   object_value = ._Rear_suspension_Three_wheeler.ground._cv_marker
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_upright  &
+   object_value = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_upright  &
+   object_value = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_suspension_mount  &
+   object_value = ._Rear_suspension_Three_wheeler.gel_Spindle
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_suspension_mount  &
+   object_value = ._Rear_suspension_Three_wheeler.ger_Spindle
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_ride_height_ref  &
+   object_value = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.coomarker_1
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_ride_height_ref  &
+   object_value = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.coomarker_2
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_suspension_parameters_ARRAY  &
+   object_value =   &
+                  ._Rear_suspension_Three_wheeler.suspension_parameters_ARRAY
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_driveline_active  &
+   object_value = ._Rear_suspension_Three_wheeler.phs_driveline_active
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cos_engine_to_subframe  &
+   object_value = ._Rear_suspension_Three_wheeler.ges_subframe
 !
 !--------------------------- Add Objects To Groups ----------------------------!
 !
@@ -2225,11 +3496,51 @@ ude modify instance  &
 ude modify instance  &
    instance_name = ._Rear_suspension_Three_wheeler.nsr_ride_spring
 !
+!-------------------------- Adams View UDE Instance ---------------------------!
+!
+!
+ude modify instance  &
+   instance_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop
+!
+!-------------------------- Adams View UDE Instance ---------------------------!
+!
+!
+ude modify instance  &
+   instance_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop
+!
 !--------------------------- Expression definitions ---------------------------!
 !
 !
 defaults coordinate_system  &
    default_coordinate_system = ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, -100.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.hps_Diff_Position))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, -90.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 100.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.hps_Diff_Position))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 90.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, -100.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_SA_wheel_center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_SA_wheel_center))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, -100.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_SA_wheel_center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_SA_wheel_center))
 !
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center  &
@@ -2371,6 +3682,76 @@ marker modify  &
    orientation =   &
       (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_Lower_Shock))
 !
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_Hooke_joint_outer_iaxis  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_Hooke_joint_outer_iaxis  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_outer_jaxis  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_outer_jaxis, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_outer_jaxis  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_outer_jaxis, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_iaxis  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_iaxis, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_iaxis  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_iaxis, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_jaxis  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({-90.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_jaxis  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({-90.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.mtl_mount_j_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ground.mtr_mount_j_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential))
+!
 data_element modify string  &
    string_name = ._Rear_suspension_Three_wheeler.minor_role_string  &
    string = (._Rear_suspension_Three_wheeler.minor_role)
@@ -2381,294 +3762,114 @@ material modify  &
    youngs_modulus = (2.07E+011(Newton/meter**2))
 !
 marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.inertia_frame  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.inertia_frame  &
    location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Swing_Arm.cm))  &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_driveshaft.cm))  &
    orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Swing_Arm))  &
-   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_driveshaft))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_driveshaft
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
 marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.gralin_1  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.gralin_3  &
    location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point))  &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
    orientation =   &
-      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Lenght, "Z"))  &
-   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer, "Z"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_driveshaft
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_j_6  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_outer_jaxis, ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_j_6, ._Rear_suspension_Three_wheeler.ground.cfl_Hooke_joint_outer_iaxis, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_driveshaft
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_i_7  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_j_7))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_i_7, ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_iaxis, ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_jaxis, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_driveshaft
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
 geometry modify shape cylinder  &
-   cylinder_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.gralin_Swing_Arm  &
-   length = (DM(._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Lenght))
+   cylinder_name = ._Rear_suspension_Three_wheeler.gel_driveshaft.gralin_driveshaft  &
+   length = (DM(._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer))
 !
 part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_driveshaft  &
    location =   &
-      (LOC_CENTERED({._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point.loc, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Lenght.loc}, 2))  &
+      (LOC_CENTERED({._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner.loc, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer.loc}, 2))  &
    orientation =   &
-      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Lenght, "Z"))
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner, ._Rear_suspension_Three_wheeler.ground.cfl_driveshaft_Outer, "Z"))
 !
 marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_i_1  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.inertia_frame  &
    location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ges_subframe.jxl_joint_j_1))  &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_driveshaft.cm))  &
    orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ges_subframe.jxl_joint_j_1))  &
-   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_driveshaft))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_driveshaft
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
 marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_2  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.gralin_4  &
    location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_SA_wheel_center))  &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
    orientation =   &
-      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_SA_wheel_center))  &
-   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer, "Z"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_driveshaft
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
 marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_3  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_j_6  &
    location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Lower_Shock))  &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer))  &
    orientation =   &
-      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfl_lower_shock_ext, ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_3, ._Rear_suspension_Three_wheeler.ground.cfl_Upper_Shock, "Z_ZX"))  &
-   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_outer_jaxis, ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_j_6, ._Rear_suspension_Three_wheeler.ground.cfr_Hooke_joint_outer_iaxis, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_driveshaft
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
 marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.inertia_frame  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_i_7  &
    location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Swing_Arm.cm))  &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_j_7))  &
    orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Swing_Arm))  &
-   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.gralin_2  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point))  &
-   orientation =   &
-      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght, "Z"))  &
-   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_i_7, ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_iaxis, ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_jaxis, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_driveshaft
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
 geometry modify shape cylinder  &
-   cylinder_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.gralin_Swing_Arm  &
-   length = (DM(._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght))
+   cylinder_name = ._Rear_suspension_Three_wheeler.ger_driveshaft.gralin_driveshaft  &
+   length = (DM(._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer))
 !
 part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_driveshaft  &
    location =   &
-      (LOC_CENTERED({._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point.loc, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght.loc}, 2))  &
+      (LOC_CENTERED({._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner.loc, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer.loc}, 2))  &
    orientation =   &
-      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght, "Z"))
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_i_1  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ges_subframe.jxr_joint_j_1))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ges_subframe.jxr_joint_j_1))  &
-   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_2  &
-   location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_SA_wheel_center))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_SA_wheel_center))  &
-   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_3  &
-   location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Lower_Shock))  &
-   orientation =   &
-      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfr_lower_shock_ext, ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_3, ._Rear_suspension_Three_wheeler.ground.cfr_Upper_Shock, "Z_ZX"))  &
-   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.inertia_frame  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Spindle.cm))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Spindle))  &
-   relative_to = ._Rear_suspension_Three_wheeler.gel_Spindle
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.gracyl_1  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, -200.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center))  &
-   relative_to = ._Rear_suspension_Three_wheeler.gel_Spindle
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.gel_Spindle  &
-   location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center))
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.jxl_joint_i_2  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_2))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_2))  &
-   relative_to = ._Rear_suspension_Three_wheeler.gel_Spindle
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.inertia_frame  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Spindle.cm))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Spindle))  &
-   relative_to = ._Rear_suspension_Three_wheeler.ger_Spindle
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.gracyl_2  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, -200.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Wheel_Center))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Wheel_Center))  &
-   relative_to = ._Rear_suspension_Three_wheeler.ger_Spindle
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.ger_Spindle  &
-   location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Wheel_Center))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_Wheel_Center))
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.jxr_joint_i_2  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_2))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_2))  &
-   relative_to = ._Rear_suspension_Three_wheeler.ger_Spindle
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Upper_Shock))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.jxl_joint_j_4  &
-   location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Upper_Shock))  &
-   orientation =   &
-      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfl_upper_shock_ext, ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.jxl_joint_j_4, ._Rear_suspension_Three_wheeler.ground.cfl_Lower_Shock, "Z_ZX"))  &
-   relative_to = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.nsl_spring_i_1  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock))  &
-   relative_to = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Upper_Shock))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.jxr_joint_j_4  &
-   location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Upper_Shock))  &
-   orientation =   &
-      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfr_upper_shock_ext, ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.jxr_joint_j_4, ._Rear_suspension_Three_wheeler.ground.cfr_Lower_Shock, "Z_ZX"))  &
-   relative_to = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.nsr_spring_i_1  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock))  &
-   relative_to = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-variable modify  &
-   variable_name = ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body.minor_role  &
-   string_value = (._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.minor_role)
-!
-variable modify  &
-   variable_name = ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body  &
-   comments = ("Autocreated for mount part: " // ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body[2].name)
-!
-variable modify  &
-   variable_name = ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body.minor_role  &
-   string_value = (._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.minor_role)
-!
-variable modify  &
-   variable_name = ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body  &
-   comments = ("Autocreated for mount part: " // ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body[2].name)
-!
-group modify  &
-   group_name = ._Rear_suspension_Three_wheeler.kinematic_mode_active  &
-   expr_active = (._Rear_suspension_Three_wheeler.phs_kinematic_flag || ._Rear_suspension_Three_wheeler.model_class == "template" ? 1 : 0)
-!
-group modify  &
-   group_name = ._Rear_suspension_Three_wheeler.kinematic_mode_inactive  &
-   expr_active = ( ! ._Rear_suspension_Three_wheeler.phs_kinematic_flag || ._Rear_suspension_Three_wheeler.model_class == "template" ? 1 : 0)
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner, ._Rear_suspension_Three_wheeler.ground.cfr_driveshaft_Outer, "Z"))
 !
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.gel_lower_strut.inertia_frame  &
@@ -2680,13 +3881,6 @@ marker modify  &
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.gel_lower_strut  &
-   location =   &
-      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock, 0.33 * DM(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock)))  &
-   orientation =   &
-      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock, "Z"))
 !
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.gel_lower_strut.gracyl_3  &
@@ -2739,6 +3933,22 @@ marker modify  &
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_lower_strut  &
+   location =   &
+      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock, 0.33 * DM(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock)))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_lower_strut.bul_bumpstop_j_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Lower_Shock))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_lower_strut
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.ger_lower_strut.inertia_frame  &
    location =   &
@@ -2749,13 +3959,6 @@ marker modify  &
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.ger_lower_strut  &
-   location =   &
-      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock, 0.33 * DM(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock)))  &
-   orientation =   &
-      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock, "Z"))
 !
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.ger_lower_strut.gracyl_4  &
@@ -2808,6 +4011,387 @@ marker modify  &
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_lower_strut  &
+   location =   &
+      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock, 0.33 * DM(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock)))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_lower_strut.bur_bumpstop_j_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Lower_Shock))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_lower_strut
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.inertia_frame  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Swing_Arm.cm))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Swing_Arm))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.gralin_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Lenght, "Z"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_i_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ges_subframe.jxl_joint_j_1))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ges_subframe.jxl_joint_j_1))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_SA_wheel_center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_SA_wheel_center))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_3  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Lower_Shock))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfl_lower_shock_ext, ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_3, ._Rear_suspension_Three_wheeler.ground.cfl_Upper_Shock, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+geometry modify shape cylinder  &
+   cylinder_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.gralin_Swing_Arm  &
+   length = (DM(._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Lenght))
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm  &
+   location =   &
+      (LOC_CENTERED({._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point.loc, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Lenght.loc}, 2))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpl_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpl_SA_Lenght, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.coomarker_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Lower_Shock))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Lower_Shock))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.mas_kp1_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.hpl_Wheel_Center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Swing_Arm.mal_kp1_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.inertia_frame  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Swing_Arm.cm))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Swing_Arm))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.gralin_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght, "Z"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_i_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ges_subframe.jxr_joint_j_1))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ges_subframe.jxr_joint_j_1))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_SA_wheel_center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_SA_wheel_center))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_3  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Lower_Shock))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfr_lower_shock_ext, ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_3, ._Rear_suspension_Three_wheeler.ground.cfr_Upper_Shock, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+geometry modify shape cylinder  &
+   cylinder_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.gralin_Swing_Arm  &
+   length = (DM(._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght))
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm  &
+   location =   &
+      (LOC_CENTERED({._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point.loc, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght.loc}, 2))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpr_SA_Pivot_point, ._Rear_suspension_Three_wheeler.ground.hpr_SA_Lenght, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.coomarker_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Lower_Shock))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Lower_Shock))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Swing_Arm.mar_kp1_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Swing_Arm
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.inertia_frame  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Spindle.cm))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Spindle))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Spindle
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.gracyl_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, -200.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Spindle
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.jxl_joint_i_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_2))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_Swing_Arm.jxl_joint_j_2))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Spindle
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_Spindle.jxl_joint_i_6  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_driveshaft.jxl_joint_j_6))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.gel_Spindle.jxl_joint_i_6, ._Rear_suspension_Three_wheeler.ground.cfl_Hooke_joint_outer_iaxis, ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_outer_jaxis, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_Spindle
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_Spindle  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_Wheel_Center))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.inertia_frame  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Spindle.cm))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Spindle))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Spindle
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.gracyl_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, -200.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Wheel_Center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Wheel_Center))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Spindle
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.jxr_joint_i_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_2))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_Swing_Arm.jxr_joint_j_2))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Spindle
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_Spindle.jxr_joint_i_6  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_driveshaft.jxr_joint_j_6))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ger_Spindle.jxr_joint_i_6, ._Rear_suspension_Three_wheeler.ground.cfr_Hooke_joint_outer_iaxis, ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_outer_jaxis, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_Spindle
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_Spindle  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Wheel_Center))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_Wheel_Center))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.jxl_joint_j_4  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Upper_Shock))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfl_upper_shock_ext, ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.jxl_joint_j_4, ._Rear_suspension_Three_wheeler.ground.cfl_Lower_Shock, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.nsl_spring_i_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Upper_Shock))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.mas_kp2_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.jxr_joint_j_4  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Upper_Shock))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ground.cfr_upper_shock_ext, ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.jxr_joint_j_4, ._Rear_suspension_Three_wheeler.ground.cfr_Lower_Shock, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.nsr_spring_i_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Upper_Shock))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.mas_kp2_2  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.inertia_frame  &
    location =   &
@@ -2818,13 +4402,6 @@ marker modify  &
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.gel_upper_strut  &
-   location =   &
-      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock, 0.67 * DM(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock)))  &
-   orientation =   &
-      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock, "Z"))
 !
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.gracyl_5  &
@@ -2868,6 +4445,22 @@ marker modify  &
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_upper_strut  &
+   location =   &
+      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock, 0.67 * DM(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock)))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpl_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_upper_strut.bul_bumpstop_i_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpl_Upper_Shock))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_upper_strut
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.inertia_frame  &
    location =   &
@@ -2878,13 +4471,6 @@ marker modify  &
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.ger_upper_strut  &
-   location =   &
-      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock, 0.67 * DM(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock)))  &
-   orientation =   &
-      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock, "Z"))
 !
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.gracyl_6  &
@@ -2928,6 +4514,22 @@ marker modify  &
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_upper_strut  &
+   location =   &
+      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock, 0.67 * DM(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock)))  &
+   orientation =   &
+      (ORI_ALONG_AXIS(._Rear_suspension_Three_wheeler.ground.hpr_Lower_Shock, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock, "Z"))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_upper_strut.bur_bumpstop_i_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.hpr_Upper_Shock))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_upper_strut
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.ges_subframe.inertia_frame  &
    location =   &
@@ -2938,11 +4540,6 @@ marker modify  &
 !
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.ges_subframe  &
-   location =   &
-      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpl_Wheel_Center, ._Rear_suspension_Three_wheeler.ground.hpr_Wheel_Center, 0.5 * DM(._Rear_suspension_Three_wheeler.ground.hpl_Wheel_Center, ._Rear_suspension_Three_wheeler.ground.hpr_Wheel_Center)))
 !
 marker modify  &
    marker_name = ._Rear_suspension_Three_wheeler.ges_subframe.jxl_joint_j_1  &
@@ -2977,6 +4574,167 @@ marker modify  &
 defaults coordinate_system  &
    default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
 !
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.ges_subframe  &
+   location =   &
+      (LOC_ALONG_LINE(._Rear_suspension_Three_wheeler.ground.hpl_Wheel_Center, ._Rear_suspension_Three_wheeler.ground.hpr_Wheel_Center, 0.5 * DM(._Rear_suspension_Three_wheeler.ground.hpl_Wheel_Center, ._Rear_suspension_Three_wheeler.ground.hpr_Wheel_Center)))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body.jxs_joint_j_1  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfs_subframe_ref))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mts_subframe_to_body
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfs_subframe_ref))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.inertia_frame  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_tripot.cm))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.gel_tripot))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_tripot
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.gracyl_7  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_tripot
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_j_7  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_iaxis))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_j_7, ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_jaxis, ._Rear_suspension_Three_wheeler.ground.cfl_hooke_joint_inner_iaxis, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_tripot
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.gel_tripot.jxl_joint_i_8  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.jxl_joint_j_8))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.jxl_joint_j_8))  &
+   relative_to = ._Rear_suspension_Three_wheeler.gel_tripot
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.gel_tripot  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 10.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.inertia_frame  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_tripot.cm))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ger_tripot))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_tripot
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.gracyl_8  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_tripot
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_j_7  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_iaxis))  &
+   orientation =   &
+      (ORI_IN_PLANE(._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_j_7, ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_jaxis, ._Rear_suspension_Three_wheeler.ground.cfr_hooke_joint_inner_iaxis, "Z_ZX"))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_tripot
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.ger_tripot.jxr_joint_i_8  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.jxr_joint_j_8))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.jxr_joint_j_8))  &
+   relative_to = ._Rear_suspension_Three_wheeler.ger_tripot
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.ger_tripot  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 10.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.jxl_joint_j_8  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.mtl_tripot_to_differential  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
+!
+marker modify  &
+   marker_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.jxr_joint_j_8  &
+   location =   &
+      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
+   relative_to = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential
+!
+defaults coordinate_system  &
+   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
+!
+part modify rigid_body name_and_position  &
+   part_name = ._Rear_suspension_Three_wheeler.mtr_tripot_to_differential  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
+!
 ude modify instance  &
    instance_name = ._Rear_suspension_Three_wheeler.dal_ride_damper  &
    location =   &
@@ -2991,32 +4749,6 @@ ude modify instance  &
    orientation =   &
       (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
 !
-part modify rigid_body name_and_position  &
-   part_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body  &
-   location =   &
-      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.cfs_subframe_ref))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
-!
-marker modify  &
-   marker_name = ._Rear_suspension_Three_wheeler.mts_subframe_to_body.jxs_joint_j_1  &
-   location =   &
-      (LOC_RELATIVE_TO({0.0, 0.0, 0.0}mm, ._Rear_suspension_Three_wheeler.ground.cfs_subframe_ref))  &
-   orientation =   &
-      (ORI_RELATIVE_TO({0.0, 0.0, 0.0}degrees, ._Rear_suspension_Three_wheeler.ground.origo))  &
-   relative_to = ._Rear_suspension_Three_wheeler.mts_subframe_to_body
-!
-defaults coordinate_system  &
-   default_coordinate_system = ._Rear_suspension_Three_wheeler.ground
-!
-variable modify  &
-   variable_name = ._Rear_suspension_Three_wheeler.cis_subframe_to_body  &
-   comments = ("Autocreated for mount part: " // ._Rear_suspension_Three_wheeler.cis_subframe_to_body[2].name)
-!
-variable modify  &
-   variable_name = ._Rear_suspension_Three_wheeler.cis_subframe_to_body.minor_role  &
-   string_value = (._Rear_suspension_Three_wheeler.mts_subframe_to_body.minor_role)
-!
 ude modify instance  &
    instance_name = ._Rear_suspension_Three_wheeler.nsl_ride_spring  &
    location =   &
@@ -3026,6 +4758,100 @@ ude modify instance  &
 !
 ude modify instance  &
    instance_name = ._Rear_suspension_Three_wheeler.nsr_ride_spring  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body.minor_role  &
+   string_value = (._Rear_suspension_Three_wheeler.mtl_Upper_Strut_To_Body.minor_role)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body  &
+   comments = ("Autocreated for mount part: " // ._Rear_suspension_Three_wheeler.cil_Upper_Strut_To_Body[2].name)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body.minor_role  &
+   string_value = (._Rear_suspension_Three_wheeler.mtr_Upper_Strut_To_Body.minor_role)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body  &
+   comments = ("Autocreated for mount part: " // ._Rear_suspension_Three_wheeler.cir_Upper_Strut_To_Body[2].name)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_subframe_to_body.minor_role  &
+   string_value = (._Rear_suspension_Three_wheeler.mts_subframe_to_body.minor_role)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_subframe_to_body  &
+   comments = ("Autocreated for mount part: " // ._Rear_suspension_Three_wheeler.cis_subframe_to_body[2].name)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_tripot_to_differential.minor_role  &
+   string_value = (._Rear_suspension_Three_wheeler.mtl_tripot_to_differential.minor_role)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cil_tripot_to_differential  &
+   comments = ("Autocreated for mount part: " // ._Rear_suspension_Three_wheeler.cil_tripot_to_differential[2].name)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_tripot_to_differential.minor_role  &
+   string_value = (._Rear_suspension_Three_wheeler.mtr_tripot_to_differential.minor_role)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cir_tripot_to_differential  &
+   comments = ("Autocreated for mount part: " // ._Rear_suspension_Three_wheeler.cir_tripot_to_differential[2].name)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cis_chassis_path_reference_adams_id  &
+   integer_value = (._Rear_suspension_Three_wheeler.cis_chassis_path_reference.object_value.adams_id)
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_wheel_center  &
+   real_value =   &
+      (._Rear_suspension_Three_wheeler.ground.hpl_Wheel_Center.location[1]),  &
+      (._Rear_suspension_Three_wheeler.ground.hpl_Wheel_Center.location[2]),  &
+      (._Rear_suspension_Three_wheeler.ground.hpl_Wheel_Center.location[3])
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_wheel_center  &
+   real_value =   &
+      (._Rear_suspension_Three_wheeler.ground.hpr_Wheel_Center.location[1]),  &
+      (._Rear_suspension_Three_wheeler.ground.hpr_Wheel_Center.location[2]),  &
+      (._Rear_suspension_Three_wheeler.ground.hpr_Wheel_Center.location[3])
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.col_tripot_to_differential  &
+   real_value =   &
+      (._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner.location[1]),  &
+      (._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner.location[2]),  &
+      (._Rear_suspension_Three_wheeler.ground.cfl_Driveshaft_Inner.location[3])
+!
+variable modify  &
+   variable_name = ._Rear_suspension_Three_wheeler.cor_tripot_to_differential  &
+   real_value =   &
+      (._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner.location[1]),  &
+      (._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner.location[2]),  &
+      (._Rear_suspension_Three_wheeler.ground.cfr_Driveshaft_Inner.location[3])
+!
+group modify  &
+   group_name = ._Rear_suspension_Three_wheeler.kinematic_mode_active  &
+   expr_active = (._Rear_suspension_Three_wheeler.phs_kinematic_flag || ._Rear_suspension_Three_wheeler.model_class == "template" ? 1 : 0)
+!
+group modify  &
+   group_name = ._Rear_suspension_Three_wheeler.kinematic_mode_inactive  &
+   expr_active = ( ! ._Rear_suspension_Three_wheeler.phs_kinematic_flag || ._Rear_suspension_Three_wheeler.model_class == "template" ? 1 : 0)
+!
+ude modify instance  &
+   instance_name = ._Rear_suspension_Three_wheeler.bul_rear_Bumpstop  &
+   location =   &
+      (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))  &
+   orientation =   &
+      (ORI_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))
+!
+ude modify instance  &
+   instance_name = ._Rear_suspension_Three_wheeler.bur_rear_Bumpstop  &
    location =   &
       (LOC_RELATIVE_TO({0, 0, 0}, ._Rear_suspension_Three_wheeler.ground.origo))  &
    orientation =   &
